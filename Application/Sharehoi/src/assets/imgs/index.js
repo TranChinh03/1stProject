@@ -1,0 +1,1 @@
+export {default as IMG_CAR} from './car.png';

@@ -14,6 +14,22 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-Sharehoi-SharehoiTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-Sharehoi-SharehoiTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		36B6D18EF76A49E28D51FE1F /* Livvic-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7AD6D53540B94265964D768A /* Livvic-Black.ttf */; };
+		C24ADCC6267F46808E2F2BC5 /* Livvic-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96ECF7AE66AF4FE18975B627 /* Livvic-BlackItalic.ttf */; };
+		9F7779E11A2040B7B0836CB3 /* Livvic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D33D996E370445796AB2B0F /* Livvic-Bold.ttf */; };
+		9FD7BC37B9FA4BF6966B728A /* Livvic-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B1602BB93E7420F8823090C /* Livvic-BoldItalic.ttf */; };
+		21A274BA8F684B259829DC4F /* Livvic-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1559763D3D754798B58AB704 /* Livvic-ExtraLight.ttf */; };
+		BFB3812A9459495398E69A63 /* Livvic-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 027BFD9A1B5B40A0BE67B356 /* Livvic-ExtraLightItalic.ttf */; };
+		7B328210B01E445BABE88B4B /* Livvic-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41B9D514040346AA9609BBEA /* Livvic-Italic.ttf */; };
+		8DF947D9352F462EB40626AC /* Livvic-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6F06FAD18314E808268E56B /* Livvic-Light.ttf */; };
+		832832835A2C4F96A15A4DB4 /* Livvic-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C79EEA61377473C8B0E25AA /* Livvic-LightItalic.ttf */; };
+		0394A52DB9F844DD94773934 /* Livvic-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 54D8A82C5EDA4361BB9C3B9C /* Livvic-Medium.ttf */; };
+		4BE1836A76E84F1B93184620 /* Livvic-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9465FB835BFA437AA86BBC38 /* Livvic-MediumItalic.ttf */; };
+		EE729DFCC6184FF492964D18 /* Livvic-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 086012168B5A49358D5C2F03 /* Livvic-Regular.ttf */; };
+		C531025F9492448DB1D4CA5E /* Livvic-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 505F5B6271B94D0386FB0298 /* Livvic-SemiBold.ttf */; };
+		A6CF919697414252AADC5C21 /* Livvic-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0ED08E4EB8BD4104AEE6CAB3 /* Livvic-SemiBoldItalic.ttf */; };
+		98BC5090B3584358A748B047 /* Livvic-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B770830D9C049D78BE5EC07 /* Livvic-Thin.ttf */; };
+		DAD0B126478246F696D17ED7 /* Livvic-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37761BE7479D4171BB3097AB /* Livvic-ThinItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +60,22 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Sharehoi/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-Sharehoi-SharehoiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sharehoi-SharehoiTests.release.xcconfig"; path = "Target Support Files/Pods-Sharehoi-SharehoiTests/Pods-Sharehoi-SharehoiTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		7AD6D53540B94265964D768A /* Livvic-Black.ttf */ = {isa = PBXFileReference; name = "Livvic-Black.ttf"; path = "../src/assets/fonts/Livvic-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		96ECF7AE66AF4FE18975B627 /* Livvic-BlackItalic.ttf */ = {isa = PBXFileReference; name = "Livvic-BlackItalic.ttf"; path = "../src/assets/fonts/Livvic-BlackItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6D33D996E370445796AB2B0F /* Livvic-Bold.ttf */ = {isa = PBXFileReference; name = "Livvic-Bold.ttf"; path = "../src/assets/fonts/Livvic-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1B1602BB93E7420F8823090C /* Livvic-BoldItalic.ttf */ = {isa = PBXFileReference; name = "Livvic-BoldItalic.ttf"; path = "../src/assets/fonts/Livvic-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1559763D3D754798B58AB704 /* Livvic-ExtraLight.ttf */ = {isa = PBXFileReference; name = "Livvic-ExtraLight.ttf"; path = "../src/assets/fonts/Livvic-ExtraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		027BFD9A1B5B40A0BE67B356 /* Livvic-ExtraLightItalic.ttf */ = {isa = PBXFileReference; name = "Livvic-ExtraLightItalic.ttf"; path = "../src/assets/fonts/Livvic-ExtraLightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		41B9D514040346AA9609BBEA /* Livvic-Italic.ttf */ = {isa = PBXFileReference; name = "Livvic-Italic.ttf"; path = "../src/assets/fonts/Livvic-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A6F06FAD18314E808268E56B /* Livvic-Light.ttf */ = {isa = PBXFileReference; name = "Livvic-Light.ttf"; path = "../src/assets/fonts/Livvic-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3C79EEA61377473C8B0E25AA /* Livvic-LightItalic.ttf */ = {isa = PBXFileReference; name = "Livvic-LightItalic.ttf"; path = "../src/assets/fonts/Livvic-LightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		54D8A82C5EDA4361BB9C3B9C /* Livvic-Medium.ttf */ = {isa = PBXFileReference; name = "Livvic-Medium.ttf"; path = "../src/assets/fonts/Livvic-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9465FB835BFA437AA86BBC38 /* Livvic-MediumItalic.ttf */ = {isa = PBXFileReference; name = "Livvic-MediumItalic.ttf"; path = "../src/assets/fonts/Livvic-MediumItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		086012168B5A49358D5C2F03 /* Livvic-Regular.ttf */ = {isa = PBXFileReference; name = "Livvic-Regular.ttf"; path = "../src/assets/fonts/Livvic-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		505F5B6271B94D0386FB0298 /* Livvic-SemiBold.ttf */ = {isa = PBXFileReference; name = "Livvic-SemiBold.ttf"; path = "../src/assets/fonts/Livvic-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0ED08E4EB8BD4104AEE6CAB3 /* Livvic-SemiBoldItalic.ttf */ = {isa = PBXFileReference; name = "Livvic-SemiBoldItalic.ttf"; path = "../src/assets/fonts/Livvic-SemiBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9B770830D9C049D78BE5EC07 /* Livvic-Thin.ttf */ = {isa = PBXFileReference; name = "Livvic-Thin.ttf"; path = "../src/assets/fonts/Livvic-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		37761BE7479D4171BB3097AB /* Livvic-ThinItalic.ttf */ = {isa = PBXFileReference; name = "Livvic-ThinItalic.ttf"; path = "../src/assets/fonts/Livvic-ThinItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +154,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				EAD043341B924F7C89CE7D95 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -147,6 +180,30 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		EAD043341B924F7C89CE7D95 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				7AD6D53540B94265964D768A /* Livvic-Black.ttf */,
+				96ECF7AE66AF4FE18975B627 /* Livvic-BlackItalic.ttf */,
+				6D33D996E370445796AB2B0F /* Livvic-Bold.ttf */,
+				1B1602BB93E7420F8823090C /* Livvic-BoldItalic.ttf */,
+				1559763D3D754798B58AB704 /* Livvic-ExtraLight.ttf */,
+				027BFD9A1B5B40A0BE67B356 /* Livvic-ExtraLightItalic.ttf */,
+				41B9D514040346AA9609BBEA /* Livvic-Italic.ttf */,
+				A6F06FAD18314E808268E56B /* Livvic-Light.ttf */,
+				3C79EEA61377473C8B0E25AA /* Livvic-LightItalic.ttf */,
+				54D8A82C5EDA4361BB9C3B9C /* Livvic-Medium.ttf */,
+				9465FB835BFA437AA86BBC38 /* Livvic-MediumItalic.ttf */,
+				086012168B5A49358D5C2F03 /* Livvic-Regular.ttf */,
+				505F5B6271B94D0386FB0298 /* Livvic-SemiBold.ttf */,
+				0ED08E4EB8BD4104AEE6CAB3 /* Livvic-SemiBoldItalic.ttf */,
+				9B770830D9C049D78BE5EC07 /* Livvic-Thin.ttf */,
+				37761BE7479D4171BB3097AB /* Livvic-ThinItalic.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -244,6 +301,22 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				36B6D18EF76A49E28D51FE1F /* Livvic-Black.ttf in Resources */,
+				C24ADCC6267F46808E2F2BC5 /* Livvic-BlackItalic.ttf in Resources */,
+				9F7779E11A2040B7B0836CB3 /* Livvic-Bold.ttf in Resources */,
+				9FD7BC37B9FA4BF6966B728A /* Livvic-BoldItalic.ttf in Resources */,
+				21A274BA8F684B259829DC4F /* Livvic-ExtraLight.ttf in Resources */,
+				BFB3812A9459495398E69A63 /* Livvic-ExtraLightItalic.ttf in Resources */,
+				7B328210B01E445BABE88B4B /* Livvic-Italic.ttf in Resources */,
+				8DF947D9352F462EB40626AC /* Livvic-Light.ttf in Resources */,
+				832832835A2C4F96A15A4DB4 /* Livvic-LightItalic.ttf in Resources */,
+				0394A52DB9F844DD94773934 /* Livvic-Medium.ttf in Resources */,
+				4BE1836A76E84F1B93184620 /* Livvic-MediumItalic.ttf in Resources */,
+				EE729DFCC6184FF492964D18 /* Livvic-Regular.ttf in Resources */,
+				C531025F9492448DB1D4CA5E /* Livvic-SemiBold.ttf in Resources */,
+				A6CF919697414252AADC5C21 /* Livvic-SemiBoldItalic.ttf in Resources */,
+				98BC5090B3584358A748B047 /* Livvic-Thin.ttf in Resources */,
+				DAD0B126478246F696D17ED7 /* Livvic-ThinItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

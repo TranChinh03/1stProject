@@ -1,5 +1,11 @@
+import ClassifyScreen from './screens/ClassifyScreen';
 import LoadingScreens from './screens/LoadingScreens';
+import ResultScreen from './screens/ResultScreen';
 
 export default function App() {
-  return <LoadingScreens />;
+  return (
+    //<LoadingScreens />;
+    //<ClassifyScreen />
+    <ResultScreen />
+  );
 }

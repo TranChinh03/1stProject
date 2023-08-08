@@ -17,10 +17,30 @@ import {IMG_CAR01164} from '../src/assets/imgs';
 import CUSTOM_SIZES from '../src/constants/size';
 import CUSTOM_FONTS from '../src/constants/fonts';
 import BackButton from '../src/components/buttonBack';
+import {launchImageLibrary} from 'react-native-image-picker';
 
 export default class ResultScreen extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      imgPath: this.props.route.params.imgPath,
+    };
+  }
+  ImagePicker() {
+    let option = {
+      storageOption: {
+        path: 'image',
+      },
+    };
+    launchImageLibrary(option, response => {
+      this.setState({imgPath: response.assets[0].uri});
+      //console.log(this.imgPath);
+      console.log('path: ', this.imgPath);
+      //this.props.navigation.navigate('Result', {imgPath: IMG_CAR});
+    });
+  }
   render() {
-    console.log('log', this.props.route.params);
+    //onsole.log('log', this.props.route.params);
 
     return (
       <SafeAreaView style={custom_styles.mainContainer}>
@@ -44,7 +64,7 @@ export default class ResultScreen extends Component {
           <View style={styles.subCon2}>
             <Image
               //source={IMG_CAR01164}
-              source={{uri: this.props.route.params.imgPath}}
+              source={{uri: this.state.imgPath}}
               resizeMode="cover"
               style={styles.imgCon}
             />
@@ -54,7 +74,11 @@ export default class ResultScreen extends Component {
           {/* <IC_BorderDashed style={{alignSelf: 'center'}}></IC_BorderDashed> */}
         </View>
         <View style={styles.container3}>
-          <TouchableOpacity style={styles.btnCon}>
+          <TouchableOpacity
+            style={styles.btnCon}
+            onPress={() => {
+              this.ImagePicker();
+            }}>
             <Text style={styles.txtBtn}>Choose another image</Text>
           </TouchableOpacity>
         </View>

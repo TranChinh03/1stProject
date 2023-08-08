@@ -31,7 +31,7 @@ export default class ClassifyScreen extends Component {
 
     launchImageLibrary(option, response => {
       this.setState({imgPath: response.assets[0].uri});
-      //console.log(this.imgPath);
+      console.log('this: ', this.imgPath);
       console.log(response.assets[0].uri);
       //this.props.navigation.navigate('Result', {imgPath: IMG_CAR});
       this.props.navigation.navigate('Result', {imgPath: this.state.imgPath});

@@ -14,12 +14,14 @@ import CUSTOM_COLORS from '../src/constants/color';
 import scale from '../src/constants/responsive';
 import {IC_Back, IC_BorderDashed} from '../src/assets/icons';
 import {IMG_CAR01164} from '../src/assets/imgs';
-import App from '../App';
 import CUSTOM_SIZES from '../src/constants/size';
 import CUSTOM_FONTS from '../src/constants/fonts';
+import BackButton from '../src/components/buttonBack';
 
 export default class ResultScreen extends Component {
   render() {
+    console.log('log', this.props.route.params);
+
     return (
       <SafeAreaView style={custom_styles.mainContainer}>
         <StatusBar
@@ -31,14 +33,18 @@ export default class ResultScreen extends Component {
         />
         <View style={styles.container1}>
           <View style={styles.subCon1}>
-            <IC_Back style={{alignSelf: 'center'}} />
+            <BackButton
+              style={{alignSelf: 'center'}}
+              onPress={() => this.props.navigation.navigate('Classify')}
+            />
             <Text style={custom_styles.txtHeading1}>Result</Text>
           </View>
         </View>
         <View style={styles.container2}>
           <View style={styles.subCon2}>
             <Image
-              source={IMG_CAR01164}
+              //source={IMG_CAR01164}
+              source={{uri: this.props.route.params.imgPath}}
               resizeMode="cover"
               style={styles.imgCon}
             />

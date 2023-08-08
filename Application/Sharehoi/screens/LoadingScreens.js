@@ -9,9 +9,19 @@ import {custom_styles} from '../src/constants/style';
 import scale from '../src/constants/responsive';
 
 export default class LoadingScreens extends Component {
+  componentDidMount() {
+    this.timeoutHandle = setTimeout(() => {
+      this.props.navigation.navigate('Classify');
+    }, 2500);
+  }
+
   render() {
     return (
-      <SafeAreaView style={custom_styles.mainContainer}>
+      <SafeAreaView
+        style={[
+          custom_styles.mainContainer,
+          {backgroundColor: APP_COLORS.primaryColor},
+        ]}>
         <View style={styles.subCon1}>
           <Image source={IMG_CAR} resizeMode="cover" style={styles.imgCon} />
         </View>

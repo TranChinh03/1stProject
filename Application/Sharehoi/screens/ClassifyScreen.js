@@ -4,6 +4,7 @@ import {
   View,
   SafeAreaView,
   TouchableOpacity,
+  Alert,
 } from 'react-native';
 import React, {Component} from 'react';
 import {custom_styles} from '../src/constants/style';
@@ -11,8 +12,31 @@ import CUSTOM_COLORS from '../src/constants/color';
 import APP_COLORS from '../src/constants/appcolors';
 import scale from '../src/constants/responsive';
 import {IC_Car} from '../src/assets/icons';
+import {launchImageLibrary} from 'react-native-image-picker';
+import {IMG_CAR} from '../src/assets/imgs';
 
 export default class ClassifyScreen extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      imgPath: '',
+    };
+  }
+  ImagePicker() {
+    let option = {
+      storageOption: {
+        path: 'image',
+      },
+    };
+
+    launchImageLibrary(option, response => {
+      this.setState({imgPath: response.assets[0].uri});
+      //console.log(this.imgPath);
+      console.log(response.assets[0].uri);
+      //this.props.navigation.navigate('Result', {imgPath: IMG_CAR});
+      this.props.navigation.navigate('Result', {imgPath: this.state.imgPath});
+    });
+  }
   render() {
     return (
       <SafeAreaView style={custom_styles.mainContainer}>
@@ -27,7 +51,11 @@ export default class ClassifyScreen extends Component {
         </View>
         <View style={styles.container1} />
         <View style={styles.container2}>
-          <TouchableOpacity style={styles.btnImport}>
+          <TouchableOpacity
+            style={styles.btnImport}
+            onPress={() => {
+              this.ImagePicker();
+            }}>
             <IC_Car style={{alignSelf: 'center'}} />
           </TouchableOpacity>
           <Text

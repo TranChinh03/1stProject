@@ -1,8 +1,12 @@
+//RUN THIS FIRST
+// set NODE_OPTIONS=--openssl-legacy-provider
+
 import * as React from 'react';
 import {
   Camera,
   Canvas,
   CanvasRenderingContext2D,
+  MobileModel,
 } from 'react-native-pytorch-core';
 import {ActivityIndicator, Alert, StyleSheet, Text, View} from 'react-native';
 import useModel from './useModel';
@@ -14,14 +18,20 @@ import {
 
 // const MODEL =
 //   'https://drive.google.com/file/d/1epJz59_D6LCDRg6cqUVN8u-et7rEwVSC/view?usp=share_link';
-const MODEL =
-  'https://github.com/raedle/test-some/releases/download/v0.0.2.0/yolov5s.torchscript.ptl';
+const MODEL = require('./bestYolov5Gh.torchscript.ptl');
+const MODEL_Classifier = require('./classification/car_classification_model.ptl');
+const classes = require('./classification/class.json');
 
 function ObjectDetection() {
+  //state for classification
+  const [classObj, setClassObj] = React.useState('');
+  const [widthObj, setWidthObj] = React.useState(50);
+
   // Insets to respect notches and menus to safely render content
   const insets = useSafeAreaInsets();
   // Load model from a given url.
   const {isReady, model} = useModel(MODEL);
+  //const {isReady2, model2} = useModel(MODEL);
   // Indicates an inference in-flight
   const [isProcessing, setIsProcessing] = React.useState(false);
   const context2DRef = React.useRef<CanvasRenderingContext2D | null>(null);
@@ -32,7 +42,7 @@ function ObjectDetection() {
       // happen because the isReady variable is only true when the model loaded
       // and isReady. However, this is a safeguard to provide user feedback in
       // unknown edge cases ;)
-      if (model == null) {
+      if (model == null || MODEL_Classifier == null) {
         Alert.alert('Model not loaded', 'The model has not been loaded yet');
         return;
       }
@@ -44,11 +54,25 @@ function ObjectDetection() {
       }
 
       // Show activity view
-      //setIsProcessing(true);
+      setIsProcessing(true);
 
       // Clear previous result
-      //ctx.clear();
-      //await ctx.invalidate();
+      ctx.clear();
+      await ctx.invalidate();
+
+      // classification car
+      const predict = await MobileModel.execute(MODEL_Classifier, {
+        image,
+      });
+      let topclass = classes[predict.result.maxIdx];
+      setClassObj(topclass);
+      const min = 1;
+      const max = 100;
+      const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+      console.log('random: ', randomNumber);
+      setWidthObj(randomNumber);
+      console.log('predict: ', topclass);
+      //image.release();
 
       // Detect objects in image
       const results = await detectObjects(model, image);
@@ -102,7 +126,7 @@ function ObjectDetection() {
 
   return (
     <View style={insets}>
-      <Camera style={styles.camera} onFrame={handleImage} />
+      <Camera style={styles.camera} onCapture={handleImage} />
       <View style={styles.canvas}>
         <Canvas
           style={StyleSheet.absoluteFill}
@@ -110,6 +134,7 @@ function ObjectDetection() {
             context2DRef.current = ctx;
           }}
         />
+        <Text>{classObj}</Text>
       </View>
       {isProcessing && (
         <View style={styles.activityIndicatorContainer}>

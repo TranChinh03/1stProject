@@ -175,7 +175,7 @@ function outputsToNMSPredictions(
       const rect: Rect = [left, top, right, bottom];
 
       // Object label based on Coco classes
-      const label = 'CocoNames[cls]';
+      const label = CocoNames[cls];
       console.log('result coco', CocoNames[cls]);
       // Put together result object
       const result = {

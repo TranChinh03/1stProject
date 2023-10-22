@@ -25,6 +25,7 @@ const classes = require('./classification/class.json');
 function ObjectDetection() {
   //state for classification
   const [classObj, setClassObj] = React.useState('');
+  const [classObj2, setClassObj2] = React.useState('');
   const [widthObj, setWidthObj] = React.useState(50);
 
   // Insets to respect notches and menus to safely render content
@@ -36,7 +37,22 @@ function ObjectDetection() {
   const [isProcessing, setIsProcessing] = React.useState(false);
   const context2DRef = React.useRef<CanvasRenderingContext2D | null>(null);
 
-  const handleImage = React.useCallback(
+  async function CarClassification(image) {
+    const predictRt = await MobileModel.execute(MODEL_Classifier, {
+      image,
+    });
+
+    let topclassRt = classes[predictRt.result.maxIdx];
+    setClassObj2(topclassRt);
+    const min = 1;
+    const max = 100;
+    const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+    //console.log('random: ', randomNumber);
+    setWidthObj(randomNumber);
+    //console.log('predict: ', topclassRt);
+    image.release();
+  }
+  const CarDetection = React.useCallback(
     async image => {
       // Show feedback to the user if the model hasn't loaded. This shouldn't
       // happen because the isReady variable is only true when the model loaded
@@ -71,7 +87,7 @@ function ObjectDetection() {
       const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
       console.log('random: ', randomNumber);
       setWidthObj(randomNumber);
-      console.log('predict: ', topclass);
+      console.log('predictCapture: ', topclass);
       //image.release();
 
       // Detect objects in image
@@ -99,7 +115,7 @@ function ObjectDetection() {
         ctx.rect(left, top, right - left, bottom - top);
         ctx.stroke();
 
-        const label = result.label;
+        const label = classObj;
         ctx.fillText(label, left, top);
       }
 
@@ -126,7 +142,11 @@ function ObjectDetection() {
 
   return (
     <View style={insets}>
-      <Camera style={styles.camera} onCapture={handleImage} />
+      <Camera
+        style={styles.camera}
+        onCapture={CarDetection}
+        onFrame={CarClassification}
+      />
       <View style={styles.canvas}>
         <Canvas
           style={StyleSheet.absoluteFill}
@@ -134,7 +154,9 @@ function ObjectDetection() {
             context2DRef.current = ctx;
           }}
         />
-        <Text>{classObj}</Text>
+        <View style={styles.resultContainer}>
+          <Text style={styles.result}>{classObj2}</Text>
+        </View>
       </View>
       {isProcessing && (
         <View style={styles.activityIndicatorContainer}>
@@ -191,5 +213,17 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     marginTop: 10,
+  },
+  result: {
+    color: 'yellow',
+    fontWeight: 'bold',
+    fontSize: 20,
+  },
+  resultContainer: {
+    alignItems: 'flex-end',
+    alignSelf: 'flex-end',
+    position: 'absolute', //Here is the trick
+    bottom: 20,
+    right: 20,
   },
 });

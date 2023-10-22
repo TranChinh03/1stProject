@@ -16,9 +16,7 @@ export default function useModel(url: string) {
     setIsReady(false);
     async function loadModel() {
       console.log('Downloading model from', url);
-      const filePath = await MobileModel.download(
-        require('./bestYolov5Gh.torchscript.ptl'),
-      );
+      const filePath = await MobileModel.download(url);
       console.log('Model downloaded to', filePath);
       const model = await torch.jit._loadForMobile(filePath);
       console.log('Model loaded for lite interpreter');

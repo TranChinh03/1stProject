@@ -1,0 +1,28 @@
+                    Executable : C:\Users\Admin\AppData\Local\Android\Sdk\cmake\3.10.2.4988404\bin\cmake.exe
+arguments : 
+-HE:\UIT\1stProject\draft2\Application\CarDetection\node_modules\react-native-pytorch-core\android
+-DCMAKE_CXX_FLAGS=-fexceptions -frtti -std=c++1y -DONANDROID
+-DCMAKE_FIND_ROOT_PATH=E:\UIT\1stProject\draft2\Application\CarDetection\node_modules\react-native-pytorch-core\android\.cxx\cmake\debug\prefab\armeabi-v7a\prefab
+-DCMAKE_BUILD_TYPE=Debug
+-DCMAKE_TOOLCHAIN_FILE=C:\Users\Admin\AppData\Local\Android\Sdk\ndk\21.4.7075529\build\cmake\android.toolchain.cmake
+-DANDROID_ABI=armeabi-v7a
+-DANDROID_NDK=C:\Users\Admin\AppData\Local\Android\Sdk\ndk\21.4.7075529
+-DANDROID_PLATFORM=android-21
+-DCMAKE_ANDROID_ARCH_ABI=armeabi-v7a
+-DCMAKE_ANDROID_NDK=C:\Users\Admin\AppData\Local\Android\Sdk\ndk\21.4.7075529
+-DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=E:\UIT\1stProject\draft2\Application\CarDetection\node_modules\react-native-pytorch-core\android\build\intermediates\cmake\debug\obj\armeabi-v7a
+-DCMAKE_RUNTIME_OUTPUT_DIRECTORY=E:\UIT\1stProject\draft2\Application\CarDetection\node_modules\react-native-pytorch-core\android\build\intermediates\cmake\debug\obj\armeabi-v7a
+-DCMAKE_MAKE_PROGRAM=C:\Users\Admin\AppData\Local\Android\Sdk\cmake\3.10.2.4988404\bin\ninja.exe
+-DCMAKE_SYSTEM_NAME=Android
+-DCMAKE_SYSTEM_VERSION=21
+-DANDROID_STL=c++_shared
+-DNODE_MODULES_DIR=E:\UIT\1stProject\draft2\Application\CarDetection\android/../node_modules
+-DREACT_NATIVE_MINOR_VERSION=64
+-BE:\UIT\1stProject\draft2\Application\CarDetection\node_modules\react-native-pytorch-core\android\.cxx\cmake\debug\armeabi-v7a
+-GNinja
+jvmArgs : 
+
+
+                    Build command args: []
+                    Version: 1

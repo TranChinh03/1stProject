@@ -1,0 +1,33 @@
+{
+  "buildFiles": [
+    "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "C:\\Users\\Admin\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
+      "-C",
+      "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\.cxx\\cmake\\debug\\arm64-v8a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "C:\\Users\\Admin\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
+    "-C",
+    "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\.cxx\\cmake\\debug\\arm64-v8a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "torchlive-Debug-arm64-v8a": {
+      "artifactName": "torchlive",
+      "buildCommandComponents": [
+        "C:\\Users\\Admin\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe",
+        "-C",
+        "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\.cxx\\cmake\\debug\\arm64-v8a",
+        "torchlive"
+      ],
+      "abi": "arm64-v8a",
+      "output": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\build\\intermediates\\cmake\\debug\\obj\\arm64-v8a\\libtorchlive.so",
+      "runtimeFiles": []
+    }
+  }
+}

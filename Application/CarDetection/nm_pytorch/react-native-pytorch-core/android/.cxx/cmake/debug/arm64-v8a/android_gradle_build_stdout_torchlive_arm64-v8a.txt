@@ -1,0 +1,33 @@
+ninja: Entering directory `E:\UIT\1stProject\draft2\Application\CarDetection\node_modules\react-native-pytorch-core\android\.cxx\cmake\debug\arm64-v8a'
+[1/32] Building CXX object CMakeFiles/torchlive.dir/1edbd6e30ca30ff67662e6db42abd8cd/react-native-pytorch-core/cxx/src/torchlive/media/Blob.cpp.o
+[2/32] Building CXX object CMakeFiles/torchlive.dir/1edbd6e30ca30ff67662e6db42abd8cd/react-native-pytorch-core/cxx/src/torchlive/Promise.cpp.o
+[3/32] Building CXX object CMakeFiles/torchlive.dir/1edbd6e30ca30ff67662e6db42abd8cd/react-native-pytorch-core/cxx/src/torchlive/ThreadPool.cpp.o
+[4/32] Building CXX object CMakeFiles/torchlive.dir/bae15726e9ec3ab24dc970d9c714cc69/cxx/src/torchlive/media/image/ImageHostObject.cpp.o
+[5/32] Building CXX object CMakeFiles/torchlive.dir/bae15726e9ec3ab24dc970d9c714cc69/cxx/src/torchlive/media/BlobHostObject.cpp.o
+[6/32] Building CXX object CMakeFiles/torchlive.dir/bae15726e9ec3ab24dc970d9c714cc69/cxx/src/torchlive/torch/IValueHostObject.cpp.o
+[7/32] Building CXX object CMakeFiles/torchlive.dir/bae15726e9ec3ab24dc970d9c714cc69/cxx/src/torchlive/torch/TensorHostObject.cpp.o
+[8/32] Building CXX object CMakeFiles/torchlive.dir/bae15726e9ec3ab24dc970d9c714cc69/cxx/src/torchlive/torch/DictHostObject.cpp.o
+[9/32] Building CXX object CMakeFiles/torchlive.dir/bae15726e9ec3ab24dc970d9c714cc69/cxx/src/torchlive/common/BaseHostObject.cpp.o
+[10/32] Building CXX object CMakeFiles/torchlive.dir/bae15726e9ec3ab24dc970d9c714cc69/cxx/src/torchlive/media/MediaNamespace.cpp.o
+[11/32] Building CXX object CMakeFiles/torchlive.dir/1edbd6e30ca30ff67662e6db42abd8cd/react-native-pytorch-core/cxx/src/torchlive/torchlive.cpp.o
+[12/32] Building CXX object CMakeFiles/torchlive.dir/bae15726e9ec3ab24dc970d9c714cc69/cxx/src/torchlive/torch/jit/JITNamespace.cpp.o
+[13/32] Building CXX object CMakeFiles/torchlive.dir/bae15726e9ec3ab24dc970d9c714cc69/cxx/src/torchlive/torch/jit/mobile/ModuleHostObject.cpp.o
+[14/32] Building CXX object CMakeFiles/torchlive.dir/bae15726e9ec3ab24dc970d9c714cc69/cxx/src/torchlive/torch/utils/constants.cpp.o
+[15/32] Building CXX object CMakeFiles/torchlive.dir/bae15726e9ec3ab24dc970d9c714cc69/cxx/src/torchlive/torch/utils/ArgumentParser.cpp.o
+[16/32] Building CXX object CMakeFiles/torchlive.dir/bae15726e9ec3ab24dc970d9c714cc69/cxx/src/torchlive/torch/utils/converter.cpp.o
+[17/32] Building CXX object CMakeFiles/torchlive.dir/bae15726e9ec3ab24dc970d9c714cc69/cxx/src/torchlive/torchvision/TorchvisionHostObject.cpp.o
+[18/32] Building CXX object CMakeFiles/torchlive.dir/bae15726e9ec3ab24dc970d9c714cc69/cxx/src/torchlive/torchvision/CenterCropModule.cpp.o
+[19/32] Building CXX object CMakeFiles/torchlive.dir/bae15726e9ec3ab24dc970d9c714cc69/cxx/src/torchlive/torch/utils/helpers.cpp.o
+[20/32] Building CXX object CMakeFiles/torchlive.dir/bae15726e9ec3ab24dc970d9c714cc69/cxx/src/torchlive/torch/TorchHostObject.cpp.o
+[21/32] Building CXX object CMakeFiles/torchlive.dir/bae15726e9ec3ab24dc970d9c714cc69/cxx/src/torchlive/vision/VisionHostObject.cpp.o
+[22/32] Building CXX object CMakeFiles/torchlive.dir/src/main/cpp/torchlive/media/image/Image.cpp.o
+[23/32] Building CXX object CMakeFiles/torchlive.dir/bae15726e9ec3ab24dc970d9c714cc69/cxx/src/torchlive/torchvision/GrayscaleModule.cpp.o
+[24/32] Building CXX object CMakeFiles/torchlive.dir/src/main/cpp/torchlive/media/NativeJSRefBridge.cpp.o
+[25/32] Building CXX object CMakeFiles/torchlive.dir/bae15726e9ec3ab24dc970d9c714cc69/cxx/src/torchlive/torchvision/AbstractScriptModule.cpp.o
+[26/32] Building CXX object CMakeFiles/torchlive.dir/bae15726e9ec3ab24dc970d9c714cc69/cxx/src/torchlive/torchvision/NormalizeModule.cpp.o
+[27/32] Building CXX object CMakeFiles/torchlive.dir/bae15726e9ec3ab24dc970d9c714cc69/cxx/src/torchlive/torchvision/ResizeModule.cpp.o
+[28/32] Building CXX object CMakeFiles/torchlive.dir/src/main/cpp/OnLoad.cpp.o
+[29/32] Building CXX object CMakeFiles/torchlive.dir/src/main/cpp/torchlive/media/image/JIImage.cpp.o
+[30/32] Building CXX object CMakeFiles/torchlive.dir/bae15726e9ec3ab24dc970d9c714cc69/cxx/src/torchlive/vision/TransformsHostObject.cpp.o
+[31/32] Building CXX object CMakeFiles/torchlive.dir/bae15726e9ec3ab24dc970d9c714cc69/cxx/src/torchlive/torchvision/VisionTransformHostObject.cpp.o
+[32/32] Linking CXX shared library ..\..\..\..\build\intermediates\cmake\debug\obj\arm64-v8a\libtorchlive.so

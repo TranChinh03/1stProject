@@ -1,0 +1,7 @@
+Executable : C:\Users\Admin\AppData\Local\Android\Sdk\cmake\3.10.2.4988404\bin\ninja.exe
+arguments : 
+-C
+E:\UIT\1stProject\draft2\Application\CarDetection\node_modules\react-native-pytorch-core\android\.cxx\cmake\debug\armeabi-v7a
+torchlive
+jvmArgs : 
+

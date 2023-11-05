@@ -18,9 +18,9 @@ import {
 
 // const MODEL =
 //   'https://drive.google.com/file/d/1epJz59_D6LCDRg6cqUVN8u-et7rEwVSC/view?usp=share_link';
-const MODEL = require('./bestYolov5Gh.torchscript.ptl');
-const MODEL_Classifier = require('./classification/car_classification_model.ptl');
-const classes = require('./classification/class.json');
+const MODEL = require('./model/bestYolov5Gh.torchscript.ptl');
+const MODEL_Classifier = require('./model/car_classification_model.ptl');
+const classes = require('./model/class.json');
 
 function ObjectDetection() {
   //state for classification

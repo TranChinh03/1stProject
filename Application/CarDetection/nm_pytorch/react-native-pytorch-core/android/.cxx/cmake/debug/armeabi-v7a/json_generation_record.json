@@ -1,0 +1,457 @@
+[
+  {
+    "level": "INFO",
+    "message": "Start JSON generation. Platform version: 21 min SDK version: armeabi-v7a",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "rebuilding JSON E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\.cxx\\cmake\\debug\\armeabi-v7a\\android_gradle_build.json due to:",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "- expected json E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\.cxx\\cmake\\debug\\armeabi-v7a\\android_gradle_build.json file is not present, will remove stale json folder",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "- missing previous command file E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\.cxx\\cmake\\debug\\armeabi-v7a\\build_command.txt, will remove stale json folder",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "- command changed from previous, will remove stale json folder",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "created folder \u0027E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\.cxx\\cmake\\debug\\armeabi-v7a\u0027",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "executing cmake Executable : C:\\Users\\Admin\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\cmake.exe\narguments : \n-HE:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\n-DCMAKE_CXX_FLAGS\u003d-fexceptions -frtti -std\u003dc++1y -DONANDROID\n-DCMAKE_FIND_ROOT_PATH\u003dE:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\.cxx\\cmake\\debug\\prefab\\armeabi-v7a\\prefab\n-DCMAKE_BUILD_TYPE\u003dDebug\n-DCMAKE_TOOLCHAIN_FILE\u003dC:\\Users\\Admin\\AppData\\Local\\Android\\Sdk\\ndk\\21.4.7075529\\build\\cmake\\android.toolchain.cmake\n-DANDROID_ABI\u003darmeabi-v7a\n-DANDROID_NDK\u003dC:\\Users\\Admin\\AppData\\Local\\Android\\Sdk\\ndk\\21.4.7075529\n-DANDROID_PLATFORM\u003dandroid-21\n-DCMAKE_ANDROID_ARCH_ABI\u003darmeabi-v7a\n-DCMAKE_ANDROID_NDK\u003dC:\\Users\\Admin\\AppData\\Local\\Android\\Sdk\\ndk\\21.4.7075529\n-DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON\n-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003dE:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\build\\intermediates\\cmake\\debug\\obj\\armeabi-v7a\n-DCMAKE_RUNTIME_OUTPUT_DIRECTORY\u003dE:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\build\\intermediates\\cmake\\debug\\obj\\armeabi-v7a\n-DCMAKE_MAKE_PROGRAM\u003dC:\\Users\\Admin\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe\n-DCMAKE_SYSTEM_NAME\u003dAndroid\n-DCMAKE_SYSTEM_VERSION\u003d21\n-DANDROID_STL\u003dc++_shared\n-DNODE_MODULES_DIR\u003dE:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\android/../node_modules\n-DREACT_NATIVE_MINOR_VERSION\u003d64\n-BE:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\.cxx\\cmake\\debug\\armeabi-v7a\n-GNinja\njvmArgs : \n\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "[\u003d\u003d \"CMake Server\" \u003d\u003d[\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"supportedProtocolVersions\":[{\"isExperimental\":true,\"major\":1,\"minor\":1}],\"type\":\"hello\"}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "]\u003d\u003d \"CMake Server\" \u003d\u003d]\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\n  \"type\": \"handshake\",\n  \"cookie\": \"gradle-cmake-cookie\",\n  \"protocolVersion\": {\n    \"isExperimental\": true,\n    \"major\": 1,\n    \"minor\": 1\n  },\n  \"sourceDirectory\": \"E:/UIT/1stProject/draft2/Application/CarDetection/node_modules/react-native-pytorch-core/android\",\n  \"buildDirectory\": \"E:/UIT/1stProject/draft2/Application/CarDetection/node_modules/react-native-pytorch-core/android/.cxx/cmake/debug/armeabi-v7a\",\n  \"generator\": \"Ninja\"\n}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"gradle-cmake-cookie\",\"inReplyTo\":\"handshake\",\"type\":\"reply\"}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\n  \"type\": \"configure\",\n  \"cacheArguments\": [\n    \"\",\n    \"-DCMAKE_CXX_FLAGS\\u003d-fexceptions -frtti -std\\u003dc++1y -DONANDROID\",\n    \"-DCMAKE_FIND_ROOT_PATH\\u003dE:\\\\UIT\\\\1stProject\\\\draft2\\\\Application\\\\CarDetection\\\\node_modules\\\\react-native-pytorch-core\\\\android\\\\.cxx\\\\cmake\\\\debug\\\\prefab\\\\armeabi-v7a\\\\prefab\",\n    \"-DCMAKE_BUILD_TYPE\\u003dDebug\",\n    \"-DCMAKE_TOOLCHAIN_FILE\\u003dC:\\\\Users\\\\Admin\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\ndk\\\\21.4.7075529\\\\build\\\\cmake\\\\android.toolchain.cmake\",\n    \"-DANDROID_ABI\\u003darmeabi-v7a\",\n    \"-DANDROID_NDK\\u003dC:\\\\Users\\\\Admin\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\ndk\\\\21.4.7075529\",\n    \"-DANDROID_PLATFORM\\u003dandroid-21\",\n    \"-DCMAKE_ANDROID_ARCH_ABI\\u003darmeabi-v7a\",\n    \"-DCMAKE_ANDROID_NDK\\u003dC:\\\\Users\\\\Admin\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\ndk\\\\21.4.7075529\",\n    \"-DCMAKE_EXPORT_COMPILE_COMMANDS\\u003dON\",\n    \"-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\\u003dE:\\\\UIT\\\\1stProject\\\\draft2\\\\Application\\\\CarDetection\\\\node_modules\\\\react-native-pytorch-core\\\\android\\\\build\\\\intermediates\\\\cmake\\\\debug\\\\obj\\\\armeabi-v7a\",\n    \"-DCMAKE_RUNTIME_OUTPUT_DIRECTORY\\u003dE:\\\\UIT\\\\1stProject\\\\draft2\\\\Application\\\\CarDetection\\\\node_modules\\\\react-native-pytorch-core\\\\android\\\\build\\\\intermediates\\\\cmake\\\\debug\\\\obj\\\\armeabi-v7a\",\n    \"-DCMAKE_MAKE_PROGRAM\\u003dC:\\\\Users\\\\Admin\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\cmake\\\\3.10.2.4988404\\\\bin\\\\ninja.exe\",\n    \"-DCMAKE_SYSTEM_NAME\\u003dAndroid\",\n    \"-DCMAKE_SYSTEM_VERSION\\u003d21\",\n    \"-DANDROID_STL\\u003dc++_shared\",\n    \"-DNODE_MODULES_DIR\\u003dE:\\\\UIT\\\\1stProject\\\\draft2\\\\Application\\\\CarDetection\\\\android/../node_modules\",\n    \"-DREACT_NATIVE_MINOR_VERSION\\u003d64\"\n  ]\n}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Check for working C compiler: C:/Users/Admin/AppData/Local/Android/Sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe\",\"type\":\"message\"}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "Check for working C compiler: C:/Users/Admin/AppData/Local/Android/Sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":33,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Check for working C compiler: C:/Users/Admin/AppData/Local/Android/Sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe -- works\",\"type\":\"message\"}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "Check for working C compiler: C:/Users/Admin/AppData/Local/Android/Sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe -- works",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Detecting C compiler ABI info\",\"type\":\"message\"}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "Detecting C compiler ABI info",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":65,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Detecting C compiler ABI info - done\",\"type\":\"message\"}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "Detecting C compiler ABI info - done",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Detecting C compile features\",\"type\":\"message\"}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "Detecting C compile features",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":96,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":126,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":155,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Detecting C compile features - done\",\"type\":\"message\"}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "Detecting C compile features - done",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Check for working CXX compiler: C:/Users/Admin/AppData/Local/Android/Sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe\",\"type\":\"message\"}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "Check for working CXX compiler: C:/Users/Admin/AppData/Local/Android/Sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":184,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Check for working CXX compiler: C:/Users/Admin/AppData/Local/Android/Sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe -- works\",\"type\":\"message\"}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "Check for working CXX compiler: C:/Users/Admin/AppData/Local/Android/Sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe -- works",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Detecting CXX compiler ABI info\",\"type\":\"message\"}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "Detecting CXX compiler ABI info",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":211,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Detecting CXX compiler ABI info - done\",\"type\":\"message\"}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "Detecting CXX compiler ABI info - done",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Detecting CXX compile features\",\"type\":\"message\"}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "Detecting CXX compile features",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":237,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":262,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":287,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":311,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Detecting CXX compile features - done\",\"type\":\"message\"}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "Detecting CXX compile features - done",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":1000,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Configuring done\",\"type\":\"message\"}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "Configuring done",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"type\":\"reply\"}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"type\":\"compute\"}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"compute\",\"progressCurrent\":1000,\"progressMaximum\":1000,\"progressMessage\":\"Generating\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"compute\",\"message\":\"Generating done\",\"type\":\"message\"}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "Generating done",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"compute\",\"type\":\"reply\"}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"type\":\"cmakeInputs\"}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"buildFiles\":[{\"isCMake\":true,\"isTemporary\":false,\"sources\":[\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineSystem.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Determine.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystem.cmake.in\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInitialize.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Initialize.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCCompiler.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompiler.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Determine-C.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android/Determine-Compiler.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeFindBinUtils.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-FindBinUtils.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCCompiler.cmake.in\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCXXCompiler.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompiler.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Determine-CXX.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android/Determine-Compiler.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeFindBinUtils.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-FindBinUtils.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXCompiler.cmake.in\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInformation.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeGenericSystem.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Linux.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/UnixPaths.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCInformation.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/GNU.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-C.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCCompiler.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCompilerCommon.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompilerABI.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeParseImplicitLinkInfo.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCCompilerABI.c\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompileFeatures.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Internal/FeatureTesting.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C-FeatureTests.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C-FeatureTests.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C-FeatureTests.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCCompiler.cmake.in\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXInformation.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-CXX.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCXXCompiler.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCompilerCommon.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompilerABI.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeParseImplicitLinkInfo.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompileFeatures.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Internal/FeatureTesting.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-FeatureTests.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-TestableFeatures.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-FeatureTests.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-TestableFeatures.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-FeatureTests.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-TestableFeatures.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-FeatureTests.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-TestableFeatures.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXCompiler.cmake.in\"]},{\"isCMake\":false,\"isTemporary\":false,\"sources\":[\"CMakeLists.txt\",\"C:/Users/Admin/AppData/Local/Android/Sdk/ndk/21.4.7075529/build/cmake/android.toolchain.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/ndk/21.4.7075529/build/cmake/platforms.cmake\",\"C:/Users/Admin/AppData/Local/Android/Sdk/ndk/21.4.7075529/build/cmake/android.toolchain.cmake\"]},{\"isCMake\":false,\"isTemporary\":true,\"sources\":[\".cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeSystem.cmake\",\".cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeCCompiler.cmake\",\".cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeCXXCompiler.cmake\",\".cxx/cmake/debug/armeabi-v7a/CMakeFiles/feature_tests.c\",\".cxx/cmake/debug/armeabi-v7a/CMakeFiles/feature_tests.c\",\".cxx/cmake/debug/armeabi-v7a/CMakeFiles/feature_tests.c\",\".cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeCCompiler.cmake\",\".cxx/cmake/debug/armeabi-v7a/CMakeFiles/feature_tests.cxx\",\".cxx/cmake/debug/armeabi-v7a/CMakeFiles/feature_tests.cxx\",\".cxx/cmake/debug/armeabi-v7a/CMakeFiles/feature_tests.cxx\",\".cxx/cmake/debug/armeabi-v7a/CMakeFiles/feature_tests.cxx\",\".cxx/cmake/debug/armeabi-v7a/CMakeFiles/3.10.2/CMakeCXXCompiler.cmake\"]}],\"cmakeRootDirectory\":\"C:/Users/Admin/AppData/Local/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10\",\"cookie\":\"\",\"inReplyTo\":\"cmakeInputs\",\"sourceDirectory\":\"E:/UIT/1stProject/draft2/Application/CarDetection/node_modules/react-native-pytorch-core/android\",\"type\":\"reply\"}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"type\":\"codemodel\"}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"configurations\":[{\"name\":\"Debug\",\"projects\":[{\"buildDirectory\":\"E:/UIT/1stProject/draft2/Application/CarDetection/node_modules/react-native-pytorch-core/android/.cxx/cmake/debug/armeabi-v7a\",\"name\":\"Project\",\"sourceDirectory\":\"E:/UIT/1stProject/draft2/Application/CarDetection/node_modules/react-native-pytorch-core/android\",\"targets\":[{\"artifacts\":[\"E:/UIT/1stProject/draft2/Application/CarDetection/node_modules/react-native-pytorch-core/android/build/intermediates/cmake/debug/obj/armeabi-v7a/libtorchlive.so\"],\"buildDirectory\":\"E:/UIT/1stProject/draft2/Application/CarDetection/node_modules/react-native-pytorch-core/android/.cxx/cmake/debug/armeabi-v7a\",\"fileGroups\":[{\"compileFlags\":\"-DFOLLY_NO_CONFIG\u003d1 -DFOLLY_HAVE_CLOCK_GETTIME\u003d1 -DFOLLY_HAVE_MEMRCHR\u003d1 -DFOLLY_USE_LIBCPP\u003d1 -DFOLLY_MOBILE\u003d1 -DON_ANDROID -DONANDROID -O0 -fno-limit-debug-info  -fPIC   -std\u003dgnu++14\",\"defines\":[\"torchlive_EXPORTS\"],\"includePath\":[{\"path\":\"E:/UIT/1stProject/draft2/Application/CarDetection/node_modules/react-native-pytorch-core/android/build/fbjni-0.5.1-headers.jar\"},{\"path\":\"E:/UIT/1stProject/draft2/Application/CarDetection/android/../node_modules/react-native/React\"},{\"path\":\"E:/UIT/1stProject/draft2/Application/CarDetection/android/../node_modules/react-native/React/Base\"},{\"path\":\"E:/UIT/1stProject/draft2/Application/CarDetection/android/../node_modules/react-native/ReactAndroid/src/main/jni\"},{\"path\":\"E:/UIT/1stProject/draft2/Application/CarDetection/android/../node_modules/react-native/ReactAndroid/src/main/java/com/facebook/react/turbomodule/core/jni\"},{\"path\":\"E:/UIT/1stProject/draft2/Application/CarDetection/android/../node_modules/react-native/ReactCommon\"},{\"path\":\"E:/UIT/1stProject/draft2/Application/CarDetection/android/../node_modules/react-native/ReactCommon/callinvoker\"},{\"path\":\"E:/UIT/1stProject/draft2/Application/CarDetection/android/../node_modules/react-native/ReactCommon/jsi\"},{\"path\":\"E:/UIT/1stProject/draft2/Application/CarDetection/android/../node_modules/react-native/ReactCommon/runtimeexecutor\"},{\"path\":\"E:/UIT/1stProject/draft2/Application/CarDetection/node_modules/react-native-pytorch-core/android/build/pytorch_android_lite-1.12.2.aar/headers\"},{\"path\":\"E:/UIT/1stProject/draft2/Application/CarDetection/node_modules/react-native-pytorch-core/android/../cxx/src\"},{\"path\":\"E:/UIT/1stProject/draft2/Application/CarDetection/node_modules/react-native-pytorch-core/android/src/main/cpp\"}],\"isGenerated\":false,\"language\":\"CXX\",\"sources\":[\"../cxx/src/torchlive/torchlive.cpp\",\"../cxx/src/torchlive/common/BaseHostObject.cpp\",\"../cxx/src/torchlive/media/Blob.cpp\",\"../cxx/src/torchlive/media/BlobHostObject.cpp\",\"../cxx/src/torchlive/media/image/ImageHostObject.cpp\",\"../cxx/src/torchlive/media/MediaNamespace.cpp\",\"../cxx/src/torchlive/Promise.cpp\",\"../cxx/src/torchlive/ThreadPool.cpp\",\"../cxx/src/torchlive/torch/DictHostObject.cpp\",\"../cxx/src/torchlive/torch/IValueHostObject.cpp\",\"../cxx/src/torchlive/torch/jit/JITNamespace.cpp\",\"../cxx/src/torchlive/torch/jit/mobile/ModuleHostObject.cpp\",\"../cxx/src/torchlive/torch/TensorHostObject.cpp\",\"../cxx/src/torchlive/torch/TorchHostObject.cpp\",\"../cxx/src/torchlive/torch/utils/ArgumentParser.cpp\",\"../cxx/src/torchlive/torch/utils/constants.cpp\",\"../cxx/src/torchlive/torch/utils/converter.cpp\",\"../cxx/src/torchlive/torch/utils/helpers.cpp\",\"../cxx/src/torchlive/torchvision/AbstractScriptModule.cpp\",\"../cxx/src/torchlive/torchvision/CenterCropModule.cpp\",\"../cxx/src/torchlive/torchvision/GrayscaleModule.cpp\",\"../cxx/src/torchlive/torchvision/NormalizeModule.cpp\",\"../cxx/src/torchlive/torchvision/ResizeModule.cpp\",\"../cxx/src/torchlive/torchvision/TorchvisionHostObject.cpp\",\"../cxx/src/torchlive/torchvision/VisionTransformHostObject.cpp\",\"../cxx/src/torchlive/vision/TransformsHostObject.cpp\",\"../cxx/src/torchlive/vision/VisionHostObject.cpp\",\"src/main/cpp/OnLoad.cpp\",\"src/main/cpp/torchlive/media/NativeJSRefBridge.cpp\",\"src/main/cpp/torchlive/media/image/Image.cpp\",\"src/main/cpp/torchlive/media/image/JIImage.cpp\"]}],\"fullName\":\"libtorchlive.so\",\"linkFlags\":\"-Wl,--exclude-libs,libgcc.a -Wl,--exclude-libs,libgcc_real.a -Wl,--exclude-libs,libatomic.a -Wl,--build-id -Wl,--fatal-warnings -Wl,--exclude-libs,libunwind.a -Wl,--no-undefined -Qunused-arguments\",\"linkLibraries\":\"-llog -lreactnativejni -lreactnativeutilsjni -lpytorch_jni_lite -lfbjni -landroid -latomic -lm\",\"linkPath\":\"-LE:\\\\UIT\\\\1stProject\\\\draft2\\\\Application\\\\CarDetection\\\\node_modules\\\\react-native-pytorch-core\\\\android\\\\build\\\\react-native-0.64.4.aar\\\\jni\\\\armeabi-v7a  -LE:\\\\UIT\\\\1stProject\\\\draft2\\\\Application\\\\CarDetection\\\\node_modules\\\\react-native-pytorch-core\\\\android\\\\build\\\\pytorch_android_lite-1.12.2.aar\\\\jni\\\\armeabi-v7a\",\"linkerLanguage\":\"CXX\",\"name\":\"torchlive\",\"sourceDirectory\":\"E:/UIT/1stProject/draft2/Application/CarDetection/node_modules/react-native-pytorch-core/android\",\"sysroot\":\"C:/Users/Admin/AppData/Local/Android/Sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/windows-x86_64/sysroot\",\"type\":\"SHARED_LIBRARY\"}]}]}],\"cookie\":\"\",\"inReplyTo\":\"codemodel\",\"type\":\"reply\"}\n",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "done executing cmake",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "write command file E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\.cxx\\cmake\\debug\\armeabi-v7a\\build_command.txt",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "JSON generation completed without problems",
+    "file": "E:\\UIT\\1stProject\\draft2\\Application\\CarDetection\\node_modules\\react-native-pytorch-core\\android\\CMakeLists.txt",
+    "tag": "debug|armeabi-v7a",
+    "diagnosticCode": "UNKNOWN"
+  }
+]

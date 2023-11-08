@@ -10,6 +10,7 @@ import ClassifyScreen from '../screens/ClassifyScreen';
 import ResultScreen from '../screens/ResultScreen';
 import {IMG_CAR, IMG_CAR01164} from '../src/assets/imgs';
 import {MyStackParamList} from './type';
+import ModelScreen from '../screens/ModelScreen';
 
 // type RootStackParamList = {
 //   Home: undefined;
@@ -38,7 +39,7 @@ export default function AppStack() {
 
   //   if (!user) {
   return (
-    <Stack.Navigator initialRouteName="Loading">
+    <Stack.Navigator initialRouteName="ModelScreen">
       <Stack.Screen
         name="Loading"
         component={LoadingScreens}
@@ -54,6 +55,11 @@ export default function AppStack() {
         component={ResultScreen}
         options={{headerShown: false}}
         initialParams={{imgPath: IMG_CAR01164}}
+      />
+      <Stack.Screen
+        name="ModelScreen"
+        component={ModelScreen}
+        options={{headerShown: false}}
       />
     </Stack.Navigator>
   );

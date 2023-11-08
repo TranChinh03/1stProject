@@ -1,5 +1,6 @@
-//RUN THIS FIRST
-// set NODE_OPTIONS=--openssl-legacy-provider
+// import {Text, StyleSheet, View} from 'react-native';
+import {Component} from 'react';
+// import {SafeAreaProvider} from 'react-native-safe-area-context';
 
 import * as React from 'react';
 import {
@@ -9,18 +10,21 @@ import {
   MobileModel,
 } from 'react-native-pytorch-core';
 import {ActivityIndicator, Alert, StyleSheet, Text, View} from 'react-native';
-import useModel from './useModel';
-import {detectObjects} from './ObjectDetection';
+//import useModel from './useModel';
+//import {detectObjects} from './ObjectDetection';
 import {
   SafeAreaProvider,
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
+import useModel from '../src/useModel';
+import {detectObjects} from '../src/ObjectDetection';
+import LoadingScreens from './LoadingScreens';
 
 // const MODEL =
 //   'https://drive.google.com/file/d/1epJz59_D6LCDRg6cqUVN8u-et7rEwVSC/view?usp=share_link';
-const MODEL = require('./model/bestYolov5Gh.torchscript.ptl');
-const MODEL_Classifier = require('./model/car_classification_model.ptl');
-const classes = require('./model/class.json');
+const MODEL = require('../src/model/bestYolov5Gh.torchscript.ptl');
+const MODEL_Classifier = require('../src/model/car_classification_model.ptl');
+const classes = require('../src/model/class.json');
 
 function ObjectDetection() {
   //state for classification
@@ -133,11 +137,12 @@ function ObjectDetection() {
   );
   if (!isReady) {
     return (
-      <View style={styles.loading}>
-        <ActivityIndicator size="small" color="tomato" />
-        <Text style={styles.loadingText}>Loading YOLOv5 Model</Text>
-        <Text>~28.1 MB</Text>
-      </View>
+      // <View style={styles.loading}>
+      //   <ActivityIndicator size="small" color="tomato" />
+      //   <Text style={styles.loadingText}>Loading YOLOv5 Model</Text>
+      //   <Text>~28.1 MB</Text>
+      // </View>
+      <LoadingScreens />
     );
   }
 
@@ -169,12 +174,14 @@ function ObjectDetection() {
   );
 }
 
-export default function App() {
-  return (
-    <SafeAreaProvider>
-      <ObjectDetection />
-    </SafeAreaProvider>
-  );
+export default class ModelScreen extends Component {
+  render() {
+    return (
+      <SafeAreaProvider>
+        <ObjectDetection />
+      </SafeAreaProvider>
+    );
+  }
 }
 
 const styles = StyleSheet.create({

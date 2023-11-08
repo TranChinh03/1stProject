@@ -5,6 +5,7 @@ import {
   SafeAreaView,
   Image,
   TouchableOpacity,
+  ActivityIndicator,
 } from 'react-native';
 import React, {Component} from 'react';
 import APP_COLORS from '../src/constants/appcolors';
@@ -18,11 +19,11 @@ import {useNavigation} from '@react-navigation/native';
 import ClassifyScreen from './ClassifyScreen';
 
 export default class LoadingScreens extends Component {
-  componentDidMount() {
-    this.timeoutHandle = setTimeout(() => {
-      this.props.navigation.navigate('Classify');
-    });
-  }
+  // componentDidMount() {
+  //   this.timeoutHandle = setTimeout(() => {
+  //     this.props.navigation.navigate('ModelScreen');
+  //   });
+  // }
   render() {
     // const navigation = useNavigation();
     return (
@@ -40,7 +41,7 @@ export default class LoadingScreens extends Component {
             Sharehoi
           </Text>
           <View style={styles.subCon3}>
-            <IC_Loading style={{alignSelf: 'center'}} />
+            <ActivityIndicator size="large" color="white" />
             <Text style={custom_styles.txtDiscription}>
               {'Use this app to find\nthe name of any car!'}
             </Text>

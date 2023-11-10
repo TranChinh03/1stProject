@@ -11,6 +11,9 @@ import ResultScreen from '../screens/ResultScreen';
 import {IMG_CAR, IMG_CAR01164} from '../src/assets/imgs';
 import {MyStackParamList} from './type';
 import ModelScreen from '../screens/ModelScreen';
+import useModel from '../src/useModel';
+import APP_MODELS from '../src/constants/models';
+import HomeScreen from '../screens/HomeScreen';
 
 // type RootStackParamList = {
 //   Home: undefined;
@@ -20,6 +23,7 @@ import ModelScreen from '../screens/ModelScreen';
 const Stack = createNativeStackNavigator();
 export default function AppStack() {
   //const navigation = useNavigation();
+  // const {isReady, model} = useModel(APP_MODELS.MODEL_Detector);
 
   //   const [initializing, setInitializing] = useState(true);
   //   const [user, setUser] = useState();
@@ -39,10 +43,15 @@ export default function AppStack() {
 
   //   if (!user) {
   return (
-    <Stack.Navigator initialRouteName="ModelScreen">
+    <Stack.Navigator initialRouteName="Loading">
       <Stack.Screen
         name="Loading"
         component={LoadingScreens}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Home"
+        component={HomeScreen}
         options={{headerShown: false}}
       />
       <Stack.Screen
@@ -60,6 +69,7 @@ export default function AppStack() {
         name="ModelScreen"
         component={ModelScreen}
         options={{headerShown: false}}
+        // initialParams={{model: model}}
       />
     </Stack.Navigator>
   );

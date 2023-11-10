@@ -19,10 +19,12 @@ import {
 import useModel from '../src/useModel';
 import {detectObjects} from '../src/ObjectDetection';
 import LoadingScreens from './LoadingScreens';
+import {useNavigation} from '@react-navigation/native';
 
 // const MODEL =
 //   'https://drive.google.com/file/d/1epJz59_D6LCDRg6cqUVN8u-et7rEwVSC/view?usp=share_link';
 const MODEL = require('../src/model/bestYolov5Gh.torchscript.ptl');
+//const MODEL = require('../src/model/best.torchscript.ptl');
 const MODEL_Classifier = require('../src/model/car_classification_model.ptl');
 const classes = require('../src/model/class.json');
 
@@ -36,11 +38,11 @@ function ObjectDetection() {
   const insets = useSafeAreaInsets();
   // Load model from a given url.
   const {isReady, model} = useModel(MODEL);
+  // console.log('download model: ', model);
   //const {isReady2, model2} = useModel(MODEL);
   // Indicates an inference in-flight
   const [isProcessing, setIsProcessing] = React.useState(false);
   const context2DRef = React.useRef<CanvasRenderingContext2D | null>(null);
-
   async function CarClassification(image) {
     const predictRt = await MobileModel.execute(MODEL_Classifier, {
       image,
@@ -135,17 +137,16 @@ function ObjectDetection() {
     },
     [model, setIsProcessing],
   );
-  if (!isReady) {
-    return (
-      // <View style={styles.loading}>
-      //   <ActivityIndicator size="small" color="tomato" />
-      //   <Text style={styles.loadingText}>Loading YOLOv5 Model</Text>
-      //   <Text>~28.1 MB</Text>
-      // </View>
-      <LoadingScreens />
-    );
-  }
-
+  // if (!isReady) {
+  //   return (
+  //     // <View style={styles.loading}>
+  //     //   <ActivityIndicator size="small" color="tomato" />
+  //     //   <Text style={styles.loadingText}>Loading YOLOv5 Model</Text>
+  //     //   <Text>~28.1 MB</Text>
+  //     // </View>
+  //     <LoadingScreens />
+  //   );
+  // }
   return (
     <View style={insets}>
       <Camera

@@ -19,11 +19,11 @@ import {useNavigation} from '@react-navigation/native';
 import ClassifyScreen from './ClassifyScreen';
 
 export default class LoadingScreens extends Component {
-  // componentDidMount() {
-  //   this.timeoutHandle = setTimeout(() => {
-  //     this.props.navigation.navigate('ModelScreen');
-  //   });
-  // }
+  componentDidMount() {
+    this.timeoutHandle = setTimeout(() => {
+      this.props.navigation.navigate('Home');
+    }, 3000);
+  }
   render() {
     // const navigation = useNavigation();
     return (

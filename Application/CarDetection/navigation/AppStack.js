@@ -14,6 +14,9 @@ import ModelScreen from '../screens/ModelScreen';
 import useModel from '../src/useModel';
 import APP_MODELS from '../src/constants/models';
 import HomeScreen from '../screens/HomeScreen';
+import IntroduceScreen from '../screens/IntroduceScreen';
+import DetectScreen from '../screens/DetectScreen';
+import VehicleScreen from '../screens/VehicleScreen';
 
 // type RootStackParamList = {
 //   Home: undefined;
@@ -60,16 +63,31 @@ export default function AppStack() {
         options={{headerShown: false}}
       />
       <Stack.Screen
+        name="Detect"
+        component={DetectScreen}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Vehicle"
+        component={VehicleScreen}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
         name="Result"
         component={ResultScreen}
         options={{headerShown: false}}
         initialParams={{imgPath: IMG_CAR01164}}
       />
       <Stack.Screen
-        name="ModelScreen"
+        name="Model"
         component={ModelScreen}
         options={{headerShown: false}}
         // initialParams={{model: model}}
+      />
+      <Stack.Screen
+        name="Intro"
+        component={IntroduceScreen}
+        options={{headerShown: false}}
       />
     </Stack.Navigator>
   );

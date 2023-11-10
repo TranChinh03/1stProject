@@ -1,5 +1,5 @@
 import AppNavigation from './navigation/AppNavigation';
-import ClassifyScreen from './screens/ClassifyScreen';
+import ClassifyScreen from './screens/InputScreen';
 import HomeScreen from './screens/HomeScreen';
 import LoadingScreens from './screens/LoadingScreens';
 import ModelScreen from './screens/ModelScreen';

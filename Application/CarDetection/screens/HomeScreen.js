@@ -26,26 +26,26 @@ import {
   IMG_TRAFFIC,
 } from '../src/assets/imgs';
 import {useNavigation} from '@react-navigation/native';
-import ClassifyScreen from './ClassifyScreen';
+import ClassifyScreen from './InputScreen';
 
 const data = [
   {
     title: 'Classify',
     text: 'Know car name using real-time camera',
     imgPath: IMG_CARWNAME,
-    navigate: 'ModelSccreen',
+    navigate: 'Classify',
   },
   {
     title: 'Detect',
     text: 'Take a photo and see where the car is!',
     imgPath: IMG_DETECTCAR,
-    navigate: 'ModelSccreen',
+    navigate: 'Detect',
   },
   {
     title: 'Vehicle',
     text: 'Detect vehicles in a traffic photo',
     imgPath: IMG_TRAFFIC,
-    navigate: 'ModelSccreen',
+    navigate: 'Vehicle',
   },
 ];
 
@@ -57,7 +57,7 @@ export default class HomeScreen extends Component {
     return (
       <TouchableOpacity
         onPress={() => {
-          this.props.navigation.navigate('ModelScreen');
+          this.props.navigation.navigate(item.navigate);
         }}>
         <View style={styles.carouselItem}>
           <View style={styles.imgContainer}>
@@ -111,7 +111,7 @@ export default class HomeScreen extends Component {
             <Text style={styles.txtVersion}>v1.1.0</Text>
             <TouchableOpacity
               style={styles.topContainer}
-              onPress={() => this.props.navigation.navigate('Classify')}>
+              onPress={() => this.props.navigation.navigate('Intro')}>
               <IC_Infor />
               <Text style={styles.txtAbout}>
                 Discover additional details about us

@@ -16,7 +16,7 @@ import {IC_Loading} from '../src/assets/icons';
 import {custom_styles} from '../src/constants/style';
 import scale from '../src/constants/responsive';
 import {useNavigation} from '@react-navigation/native';
-import ClassifyScreen from './ClassifyScreen';
+import ClassifyScreen from './InputScreen';
 
 export default class LoadingScreens extends Component {
   componentDidMount() {

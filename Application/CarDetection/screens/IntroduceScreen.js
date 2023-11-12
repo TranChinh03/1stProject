@@ -51,7 +51,7 @@ export default class IntroduceScreen extends Component {
               <Text style={styles.Heading}>About this app</Text>
               <Text style={styles.Body}>
                 {
-                  'Welcome to Sharehoi, We are student of the 2021 (K16) class at the University of Information Technology, Ho Chi Minh city.\nThis application is our 1st project, developed under the guidance of our instructor, Nguyen Tan Tran Minh Khang'
+                  'Sharehoi is an application developed for everyone to apply Artificial Intelligience to real life. The main problem is "Car Detection". Nonetheless, we have tried to develop more interesting functions for you such as: "Realtime Car Model Classification", "Car Model Detection". These functions are developed based on YOLO and ResNet model.'
                 }
               </Text>
               <View style={{height: scale(35, 'h')}} />

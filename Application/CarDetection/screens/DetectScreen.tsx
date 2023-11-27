@@ -9,7 +9,14 @@ import {
   CanvasRenderingContext2D,
   MobileModel,
 } from 'react-native-pytorch-core';
-import {ActivityIndicator, Alert, StyleSheet, Text, View} from 'react-native';
+import {
+  ActivityIndicator,
+  Alert,
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+} from 'react-native';
 //import useModel from './useModel';
 //import {detectObjects} from './ObjectDetection';
 import {
@@ -20,12 +27,18 @@ import useModel from '../src/useModel';
 import {detectObjects} from '../src/ObjectDetection';
 import LoadingScreens from './LoadingScreens';
 import {useNavigation} from '@react-navigation/native';
+import BackButton from '../src/components/buttonBack';
+import CUSTOM_FONTS from '../src/constants/fonts';
+import scale from '../src/constants/responsive';
+import {IC_Close, IC_History, IC_Save} from '../src/assets/icons';
 
 const MODEL = require('../src/model/bestYolov5Gh.torchscript.ptl');
 const MODEL_Classifier = require('../src/model/car_classification_model.ptl');
 const classes = require('../src/model/class.json');
 
-function ObjectDetection() {
+function ObjectDetection({navigation}) {
+  const [heightCam, setHeightCam] = React.useState('90%');
+  const [showResult, setShowResult] = React.useState(false);
   //state for classification
   const [classObj, setClassObj] = React.useState('');
 
@@ -36,23 +49,21 @@ function ObjectDetection() {
   // Indicates an inference in-flight
   const [isProcessing, setIsProcessing] = React.useState(false);
   const context2DRef = React.useRef<CanvasRenderingContext2D | null>(null);
+
   const CarDetection = React.useCallback(
     async image => {
-      // Show feedback to the user if the model hasn't loaded. This shouldn't
-      // happen because the isReady variable is only true when the model loaded
-      // and isReady. However, this is a safeguard to provide user feedback in
-      // unknown edge cases ;)
+      setHeightCam('50%');
+
       if (model == null || MODEL_Classifier == null) {
         Alert.alert('Model not loaded', 'The model has not been loaded yet');
         return;
       }
-
       const ctx = context2DRef.current;
+
       if (ctx == null) {
         Alert.alert('Canvas', 'The canvas is not initialized');
         return;
       }
-
       // Show activity view
       setIsProcessing(true);
 
@@ -110,19 +121,46 @@ function ObjectDetection() {
     },
     [model, setIsProcessing],
   );
-  // if (!isReady) {
-  //   return (
-  //     // <View style={styles.loading}>
-  //     //   <ActivityIndicator size="small" color="tomato" />
-  //     //   <Text style={styles.loadingText}>Loading YOLOv5 Model</Text>
-  //     //   <Text>~28.1 MB</Text>
-  //     // </View>
-  //     <LoadingScreens />
-  //   );
-  // }
+  if (!isReady) {
+    return (
+      <View style={styles.loading}>
+        <ActivityIndicator size="small" color="tomato" />
+        <Text style={styles.loadingText}>Loading Model</Text>
+        <Text>~82.5MB</Text>
+      </View>
+      // <LoadingScreens />
+    );
+  }
+
   return (
-    <View style={insets}>
-      <Camera style={styles.camera} onCapture={CarDetection} />
+    <View style={styles.container}>
+      <View style={styles.headerContainer}>
+        <BackButton
+          style={styles.btnContainer}
+          onPress={() => navigation.goBack()}
+        />
+        <View style={styles.txtContainer}>
+          <Text style={styles.txtHeader}>DETECT CAR</Text>
+          <Text style={styles.txtSubHeader}>
+            Take a photo to detect the car
+          </Text>
+        </View>
+        <View style={styles.btnContainer}>
+          <IC_History />
+        </View>
+      </View>
+      <Camera style={{height: heightCam}} onCapture={CarDetection} />
+      {/* {showResult ? ( */}
+      <View style={styles.resultContainer}>
+        <TouchableOpacity
+          style={styles.btnResultContainer}
+          onPress={() => setHeightCam('90%')}>
+          <IC_Close />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.btnResultContainer}>
+          <IC_Save />
+        </TouchableOpacity>
+      </View>
       <View style={styles.canvas}>
         <Canvas
           style={StyleSheet.absoluteFill}
@@ -131,10 +169,11 @@ function ObjectDetection() {
           }}
         />
       </View>
+      {/* ) : null} */}
       {isProcessing && (
         <View style={styles.activityIndicatorContainer}>
           <ActivityIndicator size="small" color="tomato" />
-          <Text style={styles.activityIndicatorLabel}>Detecting objects</Text>
+          <Text style={styles.activityIndicatorLabel}>Detecting car</Text>
         </View>
       )}
     </View>
@@ -142,16 +181,24 @@ function ObjectDetection() {
 }
 
 export default class DetectScreen extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
       <SafeAreaProvider>
-        <ObjectDetection />
+        <ObjectDetection navigation={this.props.navigation} />
       </SafeAreaProvider>
     );
   }
 }
 
 const styles = StyleSheet.create({
+  container: {
+    height: '100%',
+    width: '100%',
+    backgroundColor: 'black',
+  },
   activityIndicatorContainer: {
     alignItems: 'center',
     backgroundColor: 'black',
@@ -167,12 +214,13 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   camera: {
-    height: '50%',
+    height: '75%',
     width: '100%',
   },
   canvas: {
     backgroundColor: 'black',
     height: '50%',
+    width: '100%',
   },
   loading: {
     alignItems: 'center',
@@ -195,10 +243,51 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
   resultContainer: {
-    alignItems: 'flex-end',
-    alignSelf: 'flex-end',
-    position: 'absolute', //Here is the trick
-    bottom: 20,
-    right: 20,
+    marginVertical: scale(10, 'w'),
+    // alignItems: 'flex-end',
+    // alignSelf: 'flex-end',
+    // position: 'absolute', //Here is the trick
+    // bottom: 20,
+    // right: 20,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: scale(25, 'w'),
+  },
+  btnResultContainer: {
+    height: scale(50, 'w'),
+    width: scale(50, 'w'),
+    borderRadius: scale(50, 'w'),
+    backgroundColor: 'white',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  saveContainer: {
+    flex: 1,
+  },
+  headerContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: 'black',
+    alignSelf: 'center',
+    padding: scale(10, 'w'),
+  },
+  txtHeader: {
+    color: 'white',
+    textAlign: 'center',
+    fontFamily: CUSTOM_FONTS.bold,
+    fontSize: scale(24, 'w'),
+  },
+  txtSubHeader: {
+    color: 'white',
+    textAlign: 'center',
+  },
+  txtContainer: {
+    flex: 2,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  btnContainer: {
+    flex: 0.5,
+    alignItems: 'center',
   },
 });

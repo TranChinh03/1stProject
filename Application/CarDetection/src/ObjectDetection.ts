@@ -10,7 +10,7 @@ import {
   torchvision,
 } from 'react-native-pytorch-core';
 
-import CocoNames from './model/class.json';
+import CocoNames from './model/CocoClasses.json';
 
 // Original source: https://github.com/pytorch/android-demo-app/blob/master/ObjectDetection/app/src/main/java/org/pytorch/demo/objectdetection/PrePostProcessor.java
 // The code was adjusted to match PyTorch Live API
@@ -126,7 +126,7 @@ function outputsToNMSPredictions(
   imgScaleX: number,
   imgScaleY: number,
 ) {
-  const threshold = 0.3;
+  const threshold = 0.7;
   const limit = 15;
   const results = [];
   // Get number of rows (decided by YOLO model)

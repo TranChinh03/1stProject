@@ -64,7 +64,13 @@ export default class HomeScreen extends Component {
             <Text style={styles.itemTitle}>{item.title}</Text>
             <Text style={styles.itemText}>{item.text}</Text>
             <TouchableOpacity style={styles.itemButton}>
-              <Text style={styles.txtTrynow}>Try now</Text>
+              <Text
+                style={styles.txtTrynow}
+                onPress={() => {
+                  this.props.navigation.navigate(item.navigate);
+                }}>
+                Try now
+              </Text>
             </TouchableOpacity>
             <Image
               source={item.imgPath}
@@ -94,6 +100,8 @@ export default class HomeScreen extends Component {
               ref={c => {
                 this._carousel = c;
               }}
+              loop={true}
+              loopClonesPerSide={10}
               data={data}
               renderItem={this.renderItem.bind(this)}
               sliderWidth={Dimensions.get('window').width}

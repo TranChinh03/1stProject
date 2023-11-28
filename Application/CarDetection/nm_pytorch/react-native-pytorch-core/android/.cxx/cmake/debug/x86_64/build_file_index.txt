@@ -1,1 +1,0 @@
-E:\UIT\1stProject\draft2\Application\CarDetection\node_modules\react-native-pytorch-core\android\CMakeLists.txt

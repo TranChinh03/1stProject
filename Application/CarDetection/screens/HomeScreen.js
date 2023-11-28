@@ -8,25 +8,12 @@ import {
   Image,
 } from 'react-native';
 import React, {Component} from 'react';
-import {
-  IC_Car,
-  IC_DrawingArrow,
-  IC_Infor,
-  IC_Notice,
-} from '../src/assets/icons';
+import {IC_Infor, IC_Notice} from '../src/assets/icons';
 import scale from '../src/constants/responsive';
 import CUSTOM_FONTS from '../src/constants/fonts';
 import CUSTOM_COLORS from '../src/constants/color';
-import APP_COLORS from '../src/constants/appcolors';
 import Carousel from 'react-native-snap-carousel';
-import {
-  IMG_CAR,
-  IMG_CARWNAME,
-  IMG_DETECTCAR,
-  IMG_TRAFFIC,
-} from '../src/assets/imgs';
-import {useNavigation} from '@react-navigation/native';
-import ClassifyScreen from './InputScreen';
+import {IMG_CARWNAME, IMG_DETECTCAR, IMG_TRAFFIC} from '../src/assets/imgs';
 
 const data = [
   {
@@ -178,14 +165,6 @@ const styles = StyleSheet.create({
     width: '100%',
     alignSelf: 'center',
     // /backgroundColor: 'red',
-  },
-  carouselItem: {
-    // backgroundColor: CUSTOM_COLORS.BlueGreen,
-    // borderRadius: scale(20, 'w'),
-    // width: scale(225, 'h'),
-    // padding: scale(10, 'w'),
-    // height: scale(308, 'h'),
-    // justifyContent: 'flex-start',
   },
   imgContainer: {
     height: '80%',

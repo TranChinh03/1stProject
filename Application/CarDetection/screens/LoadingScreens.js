@@ -4,19 +4,14 @@ import {
   View,
   SafeAreaView,
   Image,
-  TouchableOpacity,
   ActivityIndicator,
 } from 'react-native';
 import React, {Component} from 'react';
 import APP_COLORS from '../src/constants/appcolors';
 import {IMG_CAR} from '../src/assets/imgs';
 import CUSTOM_SIZES from '../src/constants/size';
-import CUSTOM_FONTS from '../src/constants/fonts';
-import {IC_Loading} from '../src/assets/icons';
 import {custom_styles} from '../src/constants/style';
 import scale from '../src/constants/responsive';
-import {useNavigation} from '@react-navigation/native';
-import ClassifyScreen from './InputScreen';
 
 export default class LoadingScreens extends Component {
   componentDidMount() {
@@ -43,15 +38,10 @@ export default class LoadingScreens extends Component {
           <View style={styles.subCon3}>
             <ActivityIndicator size="large" color="white" />
             <Text style={custom_styles.txtDiscription}>
-              {'Use this app to find\nthe name of any car!'}
+              {'Use this app to detect\nand classify any car!'}
             </Text>
           </View>
         </View>
-        {/* <TouchableOpacity
-          style={{height: 300, width: 300, backgroundColor: 'red'}}
-          onPress={() => this.props.navigation.navigate(ClassifyScreen)}>
-          <Text style={{color: 'white'}}>Text</Text>
-        </TouchableOpacity> */}
       </SafeAreaView>
     );
   }

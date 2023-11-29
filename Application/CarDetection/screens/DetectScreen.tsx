@@ -1,6 +1,4 @@
-// import {Text, StyleSheet, View} from 'react-native';
 import {Component} from 'react';
-// import {SafeAreaProvider} from 'react-native-safe-area-context';
 
 import * as React from 'react';
 import {
@@ -17,33 +15,28 @@ import {
   View,
   TouchableOpacity,
 } from 'react-native';
-//import useModel from './useModel';
-//import {detectObjects} from './ObjectDetection';
 import {
   SafeAreaProvider,
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
 import useModel from '../src/useModel';
 import {detectObjects} from '../src/ObjectDetection';
-import LoadingScreens from './LoadingScreens';
-import {useNavigation} from '@react-navigation/native';
 import BackButton from '../src/components/buttonBack';
 import CUSTOM_FONTS from '../src/constants/fonts';
 import scale from '../src/constants/responsive';
 import {IC_Close, IC_History, IC_Save} from '../src/assets/icons';
+import CUSTOM_COLORS from '../src/constants/color';
 
-const MODEL = require('../src/model/bestYolov5Gh.torchscript.ptl');
+const MODEL = require('../src/model/car_detection_yolov5s.ptl');
 const MODEL_Classifier = require('../src/model/car_classification_model.ptl');
 const classes = require('../src/model/class.json');
 
 function ObjectDetection({navigation}) {
   const [heightCam, setHeightCam] = React.useState('90%');
-  const [showResult, setShowResult] = React.useState(false);
   //state for classification
   const [classObj, setClassObj] = React.useState('');
 
   // Insets to respect notches and menus to safely render content
-  const insets = useSafeAreaInsets();
   // Load model from a given url.
   const {isReady, model} = useModel(MODEL);
   // Indicates an inference in-flight
@@ -124,9 +117,9 @@ function ObjectDetection({navigation}) {
   if (!isReady) {
     return (
       <View style={styles.loading}>
-        <ActivityIndicator size="small" color="tomato" />
+        <ActivityIndicator size="large" color={CUSTOM_COLORS.Marianblue} />
         <Text style={styles.loadingText}>Loading Model</Text>
-        <Text>~82.5MB</Text>
+        <Text>~27.0MB</Text>
       </View>
       // <LoadingScreens />
     );
@@ -172,7 +165,7 @@ function ObjectDetection({navigation}) {
       {/* ) : null} */}
       {isProcessing && (
         <View style={styles.activityIndicatorContainer}>
-          <ActivityIndicator size="small" color="tomato" />
+          <ActivityIndicator size="large" color={CUSTOM_COLORS.Lightcyan} />
           <Text style={styles.activityIndicatorLabel}>Detecting car</Text>
         </View>
       )}
@@ -233,9 +226,10 @@ const styles = StyleSheet.create({
     top: 0,
   },
   loadingText: {
-    fontSize: 18,
+    fontSize: scale(24, 'w'),
     fontWeight: 'bold',
     marginTop: 10,
+    color: CUSTOM_COLORS.Marianblue,
   },
   result: {
     color: 'yellow',

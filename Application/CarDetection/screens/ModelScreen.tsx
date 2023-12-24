@@ -23,7 +23,7 @@ import {useNavigation} from '@react-navigation/native';
 
 // const MODEL =
 //   'https://drive.google.com/file/d/1epJz59_D6LCDRg6cqUVN8u-et7rEwVSC/view?usp=share_link';
-const MODEL = require('../src/model/bestYolov5Gh.torchscript.ptl');
+//const MODEL = require('../src/model/bestYolov5Gh.torchscript.ptl');
 //const MODEL = require('../src/model/best.torchscript.ptl');
 const MODEL_Classifier = require('../src/model/car_classification_model.ptl');
 const classes = require('../src/model/class.json');

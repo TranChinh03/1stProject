@@ -31,6 +31,7 @@ import BackButton from '../src/components/buttonBack';
 import CUSTOM_FONTS from '../src/constants/fonts';
 import scale from '../src/constants/responsive';
 import {IC_Close, IC_History, IC_Save} from '../src/assets/icons';
+import CUSTOM_COLORS from '../src/constants/color';
 
 const MODEL = require('../src/model/best.torchscript.ptl');
 const classes = require('../src/model/CocoClasses.json');
@@ -126,9 +127,9 @@ function ObjectDetection({navigation}) {
   if (!isReady) {
     return (
       <View style={styles.loading}>
-        <ActivityIndicator size="small" color="tomato" />
+        <ActivityIndicator size="large" color={CUSTOM_COLORS.Marianblue} />
         <Text style={styles.loadingText}>Loading Model</Text>
-        <Text>~82.5MB</Text>
+        <Text>~23.0MB</Text>
       </View>
       // <LoadingScreens />
     );
@@ -173,7 +174,7 @@ function ObjectDetection({navigation}) {
       {/* ) : null} */}
       {isProcessing && (
         <View style={styles.activityIndicatorContainer}>
-          <ActivityIndicator size="small" color="tomato" />
+          <ActivityIndicator size="large" color={CUSTOM_COLORS.Lightcyan} />
           <Text style={styles.activityIndicatorLabel}>Detecting vehicle</Text>
         </View>
       )}
@@ -234,9 +235,10 @@ const styles = StyleSheet.create({
     top: 0,
   },
   loadingText: {
-    fontSize: 18,
+    fontSize: scale(24, 'w'),
     fontWeight: 'bold',
     marginTop: 10,
+    color: CUSTOM_COLORS.Marianblue,
   },
   result: {
     color: 'yellow',

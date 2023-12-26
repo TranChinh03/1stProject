@@ -1,5 +1,4 @@
-import {Component} from 'react';
-
+import {Component, useRef, useState, useCallback} from 'react';
 import * as React from 'react';
 import {
   Camera,
@@ -14,6 +13,12 @@ import {
   Text,
   View,
   TouchableOpacity,
+  PermissionsAndroid,
+  Platform,
+  Animated,
+  Modal,
+  Image,
+  Pressable,
 } from 'react-native';
 import {
   SafeAreaProvider,
@@ -27,25 +32,110 @@ import scale from '../src/constants/responsive';
 import {IC_Close, IC_History, IC_Save} from '../src/assets/icons';
 import CUSTOM_COLORS from '../src/constants/color';
 
+import {captureRef} from 'react-native-view-shot';
+import CameraRoll from '@react-native-community/cameraroll';
+import {ReactNativeZoomableView} from '@openspacelabs/react-native-zoomable-view';
+//import Share from 'react-native-share';
+
 const MODEL = require('../src/model/car_detection_yolov5s.ptl');
 const MODEL_Classifier = require('../src/model/car_classification_model.ptl');
 const classes = require('../src/model/class.json');
 
 function ObjectDetection({navigation}) {
-  const [heightCam, setHeightCam] = React.useState('90%');
+  // zoom
+  const [uriImg, setUriImg] = useState('');
+  const [dialog, setDialog] = useState(false);
+
+  // create a ref
+  const viewRef = useRef();
+
+  // get permission on android
+  const getPermissionAndroid = async () => {
+    try {
+      const granted = await PermissionsAndroid.request(
+        PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE,
+        {
+          title: 'Image Download Permission',
+          message: 'Your permission is required to save images to your device',
+          buttonNegative: 'Cancel',
+          buttonPositive: 'OK',
+        },
+      );
+      if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+        return true;
+      }
+      Alert.alert(
+        '',
+        'Your permission is required to save images to your device',
+        [{text: 'OK', onPress: () => {}}],
+        {cancelable: false},
+      );
+    } catch (err) {
+      // handle error as you please
+      console.log('err', err);
+    }
+  };
+
+  // download image
+  const downloadImage = async () => {
+    try {
+      // react-native-view-shot caputures component
+      const uri = await captureRef(viewRef, {
+        format: 'png',
+        quality: 0.8,
+      });
+      setUriImg(uri);
+
+      // if (Platform.OS === 'android') {
+      //   const granted = await getPermissionAndroid();
+      //   if (!granted) {
+      //     return;
+      //   }
+      // }
+
+      // cameraroll saves image
+      const image = CameraRoll.save(uri, 'photo');
+      if (image) {
+        Alert.alert(
+          '',
+          'Image saved successfully.',
+          [{text: 'OK', onPress: () => {}}],
+          {cancelable: false},
+        );
+      }
+    } catch (error) {
+      console.log('error', error);
+    }
+  };
+
+  // const shareImage = async () => {
+  //   try {
+  //     const uri = await captureRef(viewRef, {
+  //       format: 'png',
+  //       quality: 0.8,
+  //     });
+  //     console.log('uri', uri);
+  //     const shareResponse = await Share.open({url: uri});
+  //     console.log('shareResponse', shareResponse);
+  //   } catch (error) {
+  //     console.log('error', error);
+  //   }
+  // };
+
+  const [heightCam, setHeightCam] = useState('90%');
   //state for classification
-  const [classObj, setClassObj] = React.useState('');
+  const [classObj, setClassObj] = useState('');
 
   // Insets to respect notches and menus to safely render content
   // Load model from a given url.
   const {isReady, model} = useModel(MODEL);
   // Indicates an inference in-flight
-  const [isProcessing, setIsProcessing] = React.useState(false);
-  const context2DRef = React.useRef<CanvasRenderingContext2D | null>(null);
+  const [isProcessing, setIsProcessing] = useState(false);
+  const context2DRef = useRef<CanvasRenderingContext2D | null>(null);
 
-  const CarDetection = React.useCallback(
+  const CarDetection = useCallback(
     async image => {
-      setHeightCam('50%');
+      setHeightCam('0%');
 
       if (model == null || MODEL_Classifier == null) {
         Alert.alert('Model not loaded', 'The model has not been loaded yet');
@@ -77,7 +167,7 @@ function ObjectDetection({navigation}) {
       const results = await detectObjects(model, image);
 
       // Draw image scaled by a factor or 2.5
-      const scale = 2.5;
+      const scale = 1;
       const width = image.getWidth();
       const height = image.getHeight();
       ctx.drawImage(image, 0, 0, width / scale, height / scale);
@@ -143,32 +233,66 @@ function ObjectDetection({navigation}) {
         </View>
       </View>
       <Camera style={{height: heightCam}} onCapture={CarDetection} />
-      {/* {showResult ? ( */}
       <View style={styles.resultContainer}>
         <TouchableOpacity
           style={styles.btnResultContainer}
           onPress={() => setHeightCam('90%')}>
           <IC_Close />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.btnResultContainer}>
+        <TouchableOpacity
+          style={styles.btnResultContainer}
+          onPress={downloadImage}>
           <IC_Save />
         </TouchableOpacity>
       </View>
-      <View style={styles.canvas}>
+      <TouchableOpacity
+        style={styles.canvas}
+        ref={viewRef}
+        onPress={() => setDialog(true)}>
         <Canvas
-          style={StyleSheet.absoluteFill}
+          //style={StyleSheet.absoluteFill}
+          style={styles.imgResult}
           onContext2D={ctx => {
             context2DRef.current = ctx;
           }}
         />
-      </View>
-      {/* ) : null} */}
+      </TouchableOpacity>
       {isProcessing && (
         <View style={styles.activityIndicatorContainer}>
           <ActivityIndicator size="large" color={CUSTOM_COLORS.Lightcyan} />
           <Text style={styles.activityIndicatorLabel}>Detecting car</Text>
         </View>
       )}
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={dialog}
+        onRequestClose={() => {
+          Alert.alert('Modal has been closed.');
+          //setModalVisible(!modalVisible);
+        }}>
+        <View style={styles.centeredView}>
+          <View style={styles.modalView}>
+            <View
+              style={{borderWidth: 5, flexShrink: 1, height: 1000, width: 400}}>
+              <ReactNativeZoomableView
+                maxZoom={30}
+                contentWidth={300}
+                contentHeight={150}>
+                <Image
+                  style={{width: '100%', height: '100%', resizeMode: 'contain'}}
+                  source={{uri: 'https://via.placeholder.com/400x200.png'}}
+                />
+              </ReactNativeZoomableView>
+            </View>
+            <TouchableOpacity
+              style={styles.btnResultContainer}
+              onPress={() => setDialog(false)}>
+              <IC_Close />
+            </TouchableOpacity>
+          </View>
+        </View>
+      </Modal>
     </View>
   );
 }
@@ -187,6 +311,11 @@ export default class DetectScreen extends Component {
 }
 
 const styles = StyleSheet.create({
+  imgResult: {
+    height: '100%',
+    width: '100%',
+    backgroundColor: 'black',
+  },
   container: {
     height: '100%',
     width: '100%',
@@ -211,8 +340,8 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   canvas: {
-    backgroundColor: 'black',
-    height: '50%',
+    backgroundColor: 'red',
+    height: '100%',
     width: '100%',
   },
   loading: {
@@ -283,5 +412,46 @@ const styles = StyleSheet.create({
   btnContainer: {
     flex: 0.5,
     alignItems: 'center',
+  },
+  centeredView: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  modalView: {
+    height: '100%',
+    width: '100%',
+    backgroundColor: 'black',
+    borderRadius: 20,
+    // /padding: 35,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+  button: {
+    borderRadius: 20,
+    padding: 10,
+    elevation: 2,
+  },
+  buttonOpen: {
+    backgroundColor: '#F194FF',
+  },
+  buttonClose: {
+    backgroundColor: '#2196F3',
+  },
+  textStyle: {
+    color: 'white',
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  modalText: {
+    marginBottom: 15,
+    textAlign: 'center',
   },
 });

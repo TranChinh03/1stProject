@@ -1,0 +1,69 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/Livvic-Black.ttf",
+      "sha1": "755d49656529ce33289582f247a1518d5c649d8e"
+    },
+    {
+      "path": "src/assets/fonts/Livvic-BlackItalic.ttf",
+      "sha1": "742b7a7d4730f5e0374d448d1189e9992cdf3c8a"
+    },
+    {
+      "path": "src/assets/fonts/Livvic-Bold.ttf",
+      "sha1": "cd4800c7440f282195cbd8b48abb13f58b551e9e"
+    },
+    {
+      "path": "src/assets/fonts/Livvic-BoldItalic.ttf",
+      "sha1": "940bbd8db4f50ebeec6ad625e7b3ecf89adf4a70"
+    },
+    {
+      "path": "src/assets/fonts/Livvic-ExtraLight.ttf",
+      "sha1": "709992a34178690f54205696f72d419f91f77b9d"
+    },
+    {
+      "path": "src/assets/fonts/Livvic-ExtraLightItalic.ttf",
+      "sha1": "d90153b5e508eac60b6dc91c5e68a791b149d92b"
+    },
+    {
+      "path": "src/assets/fonts/Livvic-Italic.ttf",
+      "sha1": "d182f0a0960312221ba8da04f759926d49cd2813"
+    },
+    {
+      "path": "src/assets/fonts/Livvic-Light.ttf",
+      "sha1": "95815c948f650cfb757ad2a67fb85f9db7736672"
+    },
+    {
+      "path": "src/assets/fonts/Livvic-LightItalic.ttf",
+      "sha1": "a3c073728f9205cfec8e7e6c513c258d2ef048c5"
+    },
+    {
+      "path": "src/assets/fonts/Livvic-Medium.ttf",
+      "sha1": "7d12810fc4ddb8338e1c3c8bba917cac6ee68ef7"
+    },
+    {
+      "path": "src/assets/fonts/Livvic-MediumItalic.ttf",
+      "sha1": "fa011c7e82df7a7be96f3ebfc9fd3d56dcb1f144"
+    },
+    {
+      "path": "src/assets/fonts/Livvic-Regular.ttf",
+      "sha1": "833eb969c15ff87611b515c8a415ce027232539b"
+    },
+    {
+      "path": "src/assets/fonts/Livvic-SemiBold.ttf",
+      "sha1": "e13238b2dba463cc02463bf9c070b5cfd8f88f93"
+    },
+    {
+      "path": "src/assets/fonts/Livvic-SemiBoldItalic.ttf",
+      "sha1": "2c5bd05b11cfde155284829fe73b89858818c824"
+    },
+    {
+      "path": "src/assets/fonts/Livvic-Thin.ttf",
+      "sha1": "cf40866e9758d35381519a754ce2ab60a3ed48c2"
+    },
+    {
+      "path": "src/assets/fonts/Livvic-ThinItalic.ttf",
+      "sha1": "d138631de7f2cdbe0cc6ae411555c1eafc03fc05"
+    }
+  ]
+}

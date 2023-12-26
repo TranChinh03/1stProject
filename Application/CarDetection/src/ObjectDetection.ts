@@ -42,7 +42,6 @@ type BoundingBox = {
  * right, bottom).
  */
 export async function detectObjects(model: Module, image: Image) {
-  console.log(`start detect`);
   // BEGIN: Capture performance measure for preprocessing
   const startPackTime = performance.now();
   const height = image.getHeight();
@@ -79,8 +78,6 @@ export async function detectObjects(model: Module, image: Image) {
     const startUnpackTime = global.performance.now();
     // Note: The toTensor API is likely going to change
     const prediction = output[0];
-    console.log('print output[0]: ', output[0]);
-    console.log('print prediction[0]: ', prediction[0]);
     // Get image width/height to adjust bounds returned by model to image size
     const imageWidth = image.getWidth();
     const imageHeight = image.getHeight();
@@ -140,25 +137,16 @@ function outputsToNMSPredictions(
     const outputs = prediction[i].data();
     // Filter detections lower than the thresold
     if (outputs[4] > threshold) {
-      //console.log('thres:', outputs[4]);
       // Get object bounds
       const x = outputs[0];
       const y = outputs[1];
       const w = outputs[2];
       const h = outputs[3];
-      // console.log('print output[0]: ', outputs[0]);
-      // console.log('print output[1]: ', outputs[1]);
-      // console.log('print output[2]: ', outputs[2]);
-      // console.log('print output[3]: ', outputs[3]);
       // Scale bounds to input image size
       const left = imgScaleX * (x - w / 2);
       const top = imgScaleY * (y - h / 2);
       const right = imgScaleX * (x + w / 2);
       const bottom = imgScaleY * (y + h / 2);
-      // console.log('print l: ', left);
-      // console.log('print t: ', top);
-      // console.log('print r: ', right);
-      // console.log('print b: ', bottom);
 
       // Get top class label (could be done by slicing the data from 5 to nc + 5
       // and then argmax)
@@ -176,7 +164,6 @@ function outputsToNMSPredictions(
 
       // Object label based on Coco classes
       const label = CocoNames[cls];
-      //console.log('result coco', CocoNames[cls]);
       // Put together result object
       const result = {
         label,

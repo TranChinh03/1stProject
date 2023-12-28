@@ -39,9 +39,9 @@ function CarClassification({navigation}) {
             This function classifies cars in real time
           </Text>
         </View>
-        <View style={styles.btnContainer}>
+        {/* <View style={styles.btnContainer}>
           <IC_History />
-        </View>
+        </View> */}
       </View>
       <Camera
         style={styles.camera}

@@ -5,3 +5,5 @@ export {default as IC_DrawingArrow} from './IC_drawingArrow.js';
 export {default as IC_Close} from './IC_Close.js';
 export {default as IC_Save} from './IC_Save.js';
 export {default as IC_History} from './IC_History.js';
+export {default as IC_Share} from './IC_Share.js';
+export {default as IC_Post} from './IC_Post.js';

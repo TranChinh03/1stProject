@@ -1,6 +1,4 @@
-// import {Text, StyleSheet, View} from 'react-native';
-import {Component} from 'react';
-// import {SafeAreaProvider} from 'react-native-safe-area-context';
+import {Component, useRef} from 'react';
 
 import * as React from 'react';
 import {
@@ -30,13 +28,70 @@ import {useNavigation} from '@react-navigation/native';
 import BackButton from '../src/components/buttonBack';
 import CUSTOM_FONTS from '../src/constants/fonts';
 import scale from '../src/constants/responsive';
-import {IC_Close, IC_History, IC_Save} from '../src/assets/icons';
+import {
+  IC_Close,
+  IC_History,
+  IC_Post,
+  IC_Save,
+  IC_Share,
+} from '../src/assets/icons';
 import CUSTOM_COLORS from '../src/constants/color';
+import {captureRef} from 'react-native-view-shot';
+import Share from 'react-native-share';
+import CameraRoll from '@react-native-community/cameraroll';
+import {ReactNativeZoomableView} from '@openspacelabs/react-native-zoomable-view';
 
 const MODEL = require('../src/model/best.torchscript.ptl');
 const classes = require('../src/model/CocoClasses.json');
 
 function ObjectDetection({navigation}) {
+  // create a ref
+  const viewRef = useRef();
+
+  // download image
+  const downloadImage = async () => {
+    try {
+      // react-native-view-shot caputures component
+      const uri = await captureRef(viewRef, {
+        format: 'png',
+        quality: 0.8,
+      });
+      console.log(uri);
+
+      // cameraroll saves image
+      const image = CameraRoll.save(uri, 'photo');
+      if (image) {
+        Alert.alert(
+          '',
+          'Image saved successfully.',
+          [{text: 'OK', onPress: () => {}}],
+          {cancelable: false},
+        );
+      }
+    } catch (error) {
+      console.log('error', error);
+    }
+  };
+
+  // Share image
+  const shareImage = async () => {
+    try {
+      const uri = await captureRef(viewRef, {
+        format: 'png',
+        quality: 0.8,
+      });
+      console.log('uri', uri);
+      const shareResponse = await Share.open({
+        message:
+          'My interesting exploration with ShareHoi.\nDownload Sharehoi at: https://bit.ly/ShareHoi',
+        url: uri,
+      });
+      console.log('shareResponse', shareResponse);
+    } catch (error) {
+      console.log('error', error);
+    }
+  };
+
   const [heightCam, setHeightCam] = React.useState('90%');
   const [showResult, setShowResult] = React.useState(false);
   //state for classification
@@ -52,7 +107,7 @@ function ObjectDetection({navigation}) {
 
   const CarDetection = React.useCallback(
     async image => {
-      setHeightCam('50%');
+      setHeightCam('0%');
 
       if (model == null) {
         Alert.alert('Model not loaded', 'The model has not been loaded yet');
@@ -71,23 +126,11 @@ function ObjectDetection({navigation}) {
       ctx.clear();
       await ctx.invalidate();
 
-      // // classification car
-      // const predict = await MobileModel.execute(MODEL_Classifier, {
-      //   image,
-      // });
-      // let topclass = classes[predict.result.maxIdx];
-      // console.log('index class: ', topclass);
-      // console.log('predict class: ', predict);
-      // console.log('predict class: ', predict);
-      // setClassObj(topclass);
-      // console.log('predictCapture: ', classes);
-      // //image.release();
-
       // Detect objects in image
       const results = await detectObjects(model, image);
 
       // Draw image scaled by a factor or 2.5
-      const scale = 2.5;
+      const scale = 1;
       const width = image.getWidth();
       const height = image.getHeight();
       ctx.drawImage(image, 0, 0, width / scale, height / scale);
@@ -147,31 +190,43 @@ function ObjectDetection({navigation}) {
             Take a photo to detect all vehicles
           </Text>
         </View>
-        <View style={styles.btnContainer}>
-          <IC_History />
-        </View>
+        {/* <View style={styles.btnContainer}>
+          <IC_Post />
+        </View> */}
       </View>
       <Camera style={{height: heightCam}} onCapture={CarDetection} />
-      {/* {showResult ? ( */}
       <View style={styles.resultContainer}>
         <TouchableOpacity
           style={styles.btnResultContainer}
           onPress={() => setHeightCam('90%')}>
           <IC_Close />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.btnResultContainer}>
-          <IC_Save />
-        </TouchableOpacity>
+        <View style={styles.rightButton}>
+          <TouchableOpacity
+            style={styles.btnResultContainer}
+            onPress={shareImage}>
+            <IC_Share />
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.btnResultContainer}
+            onPress={downloadImage}>
+            <IC_Save />
+          </TouchableOpacity>
+        </View>
       </View>
-      <View style={styles.canvas}>
+      <ReactNativeZoomableView
+        maxZoom={30}
+        contentWidth={300}
+        contentHeight={150}
+        ref={viewRef}>
         <Canvas
-          style={StyleSheet.absoluteFill}
+          //style={StyleSheet.absoluteFill}
+          style={styles.imgResult}
           onContext2D={ctx => {
             context2DRef.current = ctx;
           }}
         />
-      </View>
-      {/* ) : null} */}
+      </ReactNativeZoomableView>
       {isProcessing && (
         <View style={styles.activityIndicatorContainer}>
           <ActivityIndicator size="large" color={CUSTOM_COLORS.Lightcyan} />
@@ -224,6 +279,11 @@ const styles = StyleSheet.create({
     height: '50%',
     width: '100%',
   },
+  imgResult: {
+    height: '100%',
+    width: '100%',
+    backgroundColor: 'black',
+  },
   loading: {
     alignItems: 'center',
     backgroundColor: 'white',
@@ -247,11 +307,6 @@ const styles = StyleSheet.create({
   },
   resultContainer: {
     marginVertical: scale(10, 'w'),
-    // alignItems: 'flex-end',
-    // alignSelf: 'flex-end',
-    // position: 'absolute', //Here is the trick
-    // bottom: 20,
-    // right: 20,
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingHorizontal: scale(25, 'w'),
@@ -263,9 +318,11 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     justifyContent: 'center',
     alignItems: 'center',
+    marginLeft: scale(25, 'w'),
   },
-  saveContainer: {
-    flex: 1,
+  rightButton: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
   headerContainer: {
     flexDirection: 'row',

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "561306895695",
+    "project_id": "sharehoi",
+    "storage_bucket": "sharehoi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:561306895695:android:399daff90261911970f13a",
+        "android_client_info": {
+          "package_name": "ShareHoi.uit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7ZGohDGsohes4YILf3xPd6RpjpnBmDQw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

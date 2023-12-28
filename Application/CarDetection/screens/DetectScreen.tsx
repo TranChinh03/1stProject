@@ -13,68 +13,50 @@ import {
   Text,
   View,
   TouchableOpacity,
-  PermissionsAndroid,
-  Platform,
-  Animated,
-  Modal,
-  Image,
-  Pressable,
 } from 'react-native';
-import {
-  SafeAreaProvider,
-  useSafeAreaInsets,
-} from 'react-native-safe-area-context';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 import useModel from '../src/useModel';
 import {detectObjects} from '../src/ObjectDetection';
 import BackButton from '../src/components/buttonBack';
 import CUSTOM_FONTS from '../src/constants/fonts';
 import scale from '../src/constants/responsive';
-import {IC_Close, IC_History, IC_Save} from '../src/assets/icons';
+import {IC_Close, IC_Post, IC_Save, IC_Share} from '../src/assets/icons';
 import CUSTOM_COLORS from '../src/constants/color';
 
 import {captureRef} from 'react-native-view-shot';
 import CameraRoll from '@react-native-community/cameraroll';
 import {ReactNativeZoomableView} from '@openspacelabs/react-native-zoomable-view';
-//import Share from 'react-native-share';
+import APP_COLORS from '../src/constants/appcolors';
+import Share from 'react-native-share';
+import {launchImageLibrary} from 'react-native-image-picker';
 
 const MODEL = require('../src/model/car_detection_yolov5s.ptl');
 const MODEL_Classifier = require('../src/model/car_classification_model.ptl');
 const classes = require('../src/model/class.json');
 
 function ObjectDetection({navigation}) {
-  // zoom
-  const [uriImg, setUriImg] = useState('');
-  const [dialog, setDialog] = useState(false);
-
+  const [count, setCount] = useState(0);
   // create a ref
   const viewRef = useRef();
 
-  // get permission on android
-  const getPermissionAndroid = async () => {
-    try {
-      const granted = await PermissionsAndroid.request(
-        PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE,
-        {
-          title: 'Image Download Permission',
-          message: 'Your permission is required to save images to your device',
-          buttonNegative: 'Cancel',
-          buttonPositive: 'OK',
-        },
-      );
-      if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-        return true;
-      }
-      Alert.alert(
-        '',
-        'Your permission is required to save images to your device',
-        [{text: 'OK', onPress: () => {}}],
-        {cancelable: false},
-      );
-    } catch (err) {
-      // handle error as you please
-      console.log('err', err);
-    }
-  };
+  // // pick image
+  // const ImagePickers = () => {
+  //   let options = {
+  //     // mediaType: 'photo',
+  //     // includeBase64: false,
+  //     // maxHeight: 200,
+  //     // maxWidth: 200,
+  //     storageOption: {
+  //       path: 'image',
+  //     },
+  //   };
+
+  //   launchImageLibrary(options, response => {
+  //     setImgPath(response.assets[0].uri);
+  //     // console.log('this: ', imgPath);
+  //     // console.log(response.assets[0].uri);
+  //   });
+  // };
 
   // download image
   const downloadImage = async () => {
@@ -84,14 +66,7 @@ function ObjectDetection({navigation}) {
         format: 'png',
         quality: 0.8,
       });
-      setUriImg(uri);
-
-      // if (Platform.OS === 'android') {
-      //   const granted = await getPermissionAndroid();
-      //   if (!granted) {
-      //     return;
-      //   }
-      // }
+      console.log(uri);
 
       // cameraroll saves image
       const image = CameraRoll.save(uri, 'photo');
@@ -108,19 +83,24 @@ function ObjectDetection({navigation}) {
     }
   };
 
-  // const shareImage = async () => {
-  //   try {
-  //     const uri = await captureRef(viewRef, {
-  //       format: 'png',
-  //       quality: 0.8,
-  //     });
-  //     console.log('uri', uri);
-  //     const shareResponse = await Share.open({url: uri});
-  //     console.log('shareResponse', shareResponse);
-  //   } catch (error) {
-  //     console.log('error', error);
-  //   }
-  // };
+  // Share image
+  const shareImage = async () => {
+    try {
+      const uri = await captureRef(viewRef, {
+        format: 'png',
+        quality: 0.8,
+      });
+      console.log('uri', uri);
+      const shareResponse = await Share.open({
+        message:
+          'My interesting exploration with ShareHoi.\nDownload Sharehoi at: https://bit.ly/ShareHoi',
+        url: uri,
+      });
+      console.log('shareResponse', shareResponse);
+    } catch (error) {
+      console.log('error', error);
+    }
+  };
 
   const [heightCam, setHeightCam] = useState('90%');
   //state for classification
@@ -228,9 +208,9 @@ function ObjectDetection({navigation}) {
             Take a photo to detect the car
           </Text>
         </View>
-        <View style={styles.btnContainer}>
-          <IC_History />
-        </View>
+        {/* <TouchableOpacity style={styles.btnContainer}>
+          <IC_Post />
+        </TouchableOpacity> */}
       </View>
       <Camera style={{height: heightCam}} onCapture={CarDetection} />
       <View style={styles.resultContainer}>
@@ -239,16 +219,24 @@ function ObjectDetection({navigation}) {
           onPress={() => setHeightCam('90%')}>
           <IC_Close />
         </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.btnResultContainer}
-          onPress={downloadImage}>
-          <IC_Save />
-        </TouchableOpacity>
+        <View style={styles.rightButton}>
+          <TouchableOpacity
+            style={styles.btnResultContainer}
+            onPress={shareImage}>
+            <IC_Share />
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.btnResultContainer}
+            onPress={downloadImage}>
+            <IC_Save />
+          </TouchableOpacity>
+        </View>
       </View>
-      <TouchableOpacity
-        style={styles.canvas}
-        ref={viewRef}
-        onPress={() => setDialog(true)}>
+      <ReactNativeZoomableView
+        maxZoom={30}
+        contentWidth={300}
+        contentHeight={150}
+        ref={viewRef}>
         <Canvas
           //style={StyleSheet.absoluteFill}
           style={styles.imgResult}
@@ -256,43 +244,13 @@ function ObjectDetection({navigation}) {
             context2DRef.current = ctx;
           }}
         />
-      </TouchableOpacity>
+      </ReactNativeZoomableView>
       {isProcessing && (
         <View style={styles.activityIndicatorContainer}>
           <ActivityIndicator size="large" color={CUSTOM_COLORS.Lightcyan} />
           <Text style={styles.activityIndicatorLabel}>Detecting car</Text>
         </View>
       )}
-      <Modal
-        animationType="slide"
-        transparent={true}
-        visible={dialog}
-        onRequestClose={() => {
-          Alert.alert('Modal has been closed.');
-          //setModalVisible(!modalVisible);
-        }}>
-        <View style={styles.centeredView}>
-          <View style={styles.modalView}>
-            <View
-              style={{borderWidth: 5, flexShrink: 1, height: 1000, width: 400}}>
-              <ReactNativeZoomableView
-                maxZoom={30}
-                contentWidth={300}
-                contentHeight={150}>
-                <Image
-                  style={{width: '100%', height: '100%', resizeMode: 'contain'}}
-                  source={{uri: 'https://via.placeholder.com/400x200.png'}}
-                />
-              </ReactNativeZoomableView>
-            </View>
-            <TouchableOpacity
-              style={styles.btnResultContainer}
-              onPress={() => setDialog(false)}>
-              <IC_Close />
-            </TouchableOpacity>
-          </View>
-        </View>
-      </Modal>
     </View>
   );
 }
@@ -367,11 +325,6 @@ const styles = StyleSheet.create({
   },
   resultContainer: {
     marginVertical: scale(10, 'w'),
-    // alignItems: 'flex-end',
-    // alignSelf: 'flex-end',
-    // position: 'absolute', //Here is the trick
-    // bottom: 20,
-    // right: 20,
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingHorizontal: scale(25, 'w'),
@@ -383,9 +336,11 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     justifyContent: 'center',
     alignItems: 'center',
+    marginLeft: scale(20, 'w'),
   },
-  saveContainer: {
-    flex: 1,
+  rightButton: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
   headerContainer: {
     flexDirection: 'row',
@@ -413,45 +368,13 @@ const styles = StyleSheet.create({
     flex: 0.5,
     alignItems: 'center',
   },
-  centeredView: {
-    flex: 1,
+  btnImport: {
+    height: scale(125, 'w'),
+    width: scale(125, 'w'),
+    borderRadius: scale(125 / 2, 'w'),
+    backgroundColor: APP_COLORS.primaryColor,
+    alignSelf: 'center',
+    marginBottom: scale(20, 'h'),
     justifyContent: 'center',
-    alignItems: 'center',
-  },
-  modalView: {
-    height: '100%',
-    width: '100%',
-    backgroundColor: 'black',
-    borderRadius: 20,
-    // /padding: 35,
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
-  },
-  button: {
-    borderRadius: 20,
-    padding: 10,
-    elevation: 2,
-  },
-  buttonOpen: {
-    backgroundColor: '#F194FF',
-  },
-  buttonClose: {
-    backgroundColor: '#2196F3',
-  },
-  textStyle: {
-    color: 'white',
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-  modalText: {
-    marginBottom: 15,
-    textAlign: 'center',
   },
 });
